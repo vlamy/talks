@@ -6,9 +6,40 @@ layout: true
 
 class: impact
 
-# Post quantum cryptography
+# .title[Post quantum cryptography]
 ## Achievement unlocked with .red[{Kyber}] and .red[{Dilithium}]
+
 ### By Willy Malvault
+
+---
+
+class: full, center
+
+# Post Quantum Cryptography (PQC)
+
+## What's the problem ?
+
+.col-4[
+  ## Asymetric cryptography
+
+  * crypt Internet traffic (TLS, SSH, etc.)
+  * sign content (software binaries, etc.)
+]
+
+--
+.col-4[
+  ## Quantum Computing
+
+  * crypt Internet traffic (TLS, SSH, etc.)
+  * sign content (software binaries, etc.)
+]
+
+--
+
+.col-4[
+  ## [Shor's algorithm](https://fr.wikipedia.org/wiki/Algorithme_de_Shor)
+  Breaks legacy cryptography using quantum computing
+]
 
 ---
 
@@ -18,7 +49,7 @@ class: full
 
 --
 
-## Shor algorithm
+## Shor algorithm threat
 
 [Shor Algorithm](https://fr.wikipedia.org/wiki/Algorithme_de_Shor)
 
@@ -29,7 +60,6 @@ class: full
 * [NIST Announcement](https://www.nist.gov/news-events/news/2022/07/nist-announces-first-four-quantum-resistant-cryptographic-algorithms)
 
 ---
-
 # Kyber
 
 [Kyber](https://pq-crystals.org/kyber/index.shtml)

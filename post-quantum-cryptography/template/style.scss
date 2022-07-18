@@ -53,7 +53,7 @@ $code-background  : $base01;
 $table-border     : #ccc;
 $overlay          : transparentize(#000, .5);
 $font-size        : 28px;
-$font-size-impact : 128px;
+$font-size-impact : 85px;
 $font             : 'Noto Sans', Arial, Helvetica, sans-serif;
 $font-title       : 'Quicksand', Arial, Helvetica, sans-serif;
 $font-fixed       : 'Inconsolata', monospace;
@@ -180,10 +180,13 @@ table {
 // Additions
 .impact {
   background-color: $primary;
-  vertical-align: middle;
+  // vertical-align: middle;
   text-align: center;
   &, h1, h2 { color: $text-light; }
-  h1 { font-size: $font-size-impact; }
+  h1 {
+    font-size: $font-size-impact;
+    padding-bottom: 50px;
+  }
 }
 
 .full {
@@ -266,7 +269,7 @@ table {
 .light-bg { background-color: $light; }
 .alt-bg { background-color: $secondary; };
 
-// Custom
+// custom style
 .red { color: $red; }
 
 // Simple 12-columns grid system
