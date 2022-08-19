@@ -19,26 +19,6 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
-@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
-{
-    background-color:$rebase03;
-    color:$rebase0;
-    * { color:$rebase0; }
-    h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
-    a, a:active, a:visited { color: $rebase1; }
-}
-@mixin accentize($accent) {
-    a, a:active, a:visited, code.url { color: $accent; }
-    h1,h2,h3,h4,h5,h6 {color:$accent}
-}
-/* light is default mode, so pair with general html definition */
-html, .light { @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03)}
-.dark  { @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3)}
-html * {
-    color-profile: sRGB;
-    rendering-intent: auto;
-}
-
 // Theme
 // ---------------------------------------------------------------------------
 
@@ -49,7 +29,7 @@ $light            : $base2;
 $dark             : $base02;
 $text-dark        : $base02;
 $text-light       : $light;
-$code-background  : $base01;
+$code-background  : $dark;
 $table-border     : #ccc;
 $overlay          : transparentize(#000, .5);
 $font-size        : 28px;
@@ -74,9 +54,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 $margin 0;
   font-family: $font-title;
 }
-h1 { color: $primary; }
+h1 { color: $yellow; }
 h2 { color: $secondary; }
-h3 { color: $tertiary; }
+h3 { color: $red; }
 li { margin-bottom: .25em; };
 pre, code {
   text-align: left;
@@ -158,8 +138,9 @@ table {
 .remark-slide-content {
   font-size: $font-size;
   padding: 1em 2em;
-  color: $text-dark;
+  color: $text-light;
   background-size: cover;
+  background: $dark;
 }
 
 .remark-slide-number {
@@ -167,22 +148,21 @@ table {
 }
 
 // Overrides
-.remark-slide .remark-slide-content {
-  &:not(.impact):not(.full) {
-    h2 {
-      border-left: 8px solid;
-      font-size: 40px;
-      padding-left: .5em;
-    }
-  }
-}
+// .remark-slide .remark-slide-content {
+//   &:not(.impact):not(.full) {
+//     h2 {
+//       border-left: 8px solid;
+//       font-size: 40px;
+//       padding-left: .5em;
+//     }
+//   }
+// }
 
 // Additions
 .impact {
   background-color: $primary;
   // vertical-align: middle;
   text-align: center;
-  &, h1, h2 { color: $text-light; }
   h1 {
     font-size: $font-size-impact;
     padding-bottom: 50px;
@@ -304,6 +284,14 @@ table {
     float: none;
     display: inline-block;
   }
+}
+
+.rsa-img {
+  position: absolute;
+  top: 4em;
+  right: 2em;
+  opacity: 0.6;
+  z-index: 10;
 }
 
 @for $i from 1 through 12 {
