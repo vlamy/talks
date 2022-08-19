@@ -13,7 +13,7 @@ By Willy Malvault
 
 ---
 
-# And Internet came to life ...
+# Once again, an Internet story...
 
 .col-6[
 * Public, federated, unpredictable and untrusted network
@@ -75,14 +75,77 @@ By Willy Malvault
 * Provides
     * Public key encryption
     * Digital signature
-
-* Slow on encryption and decryption --> session key establishment, typically with Diffie-Helman key exchange
 ]
 
 ---
 
-# RSA in short
+.col-4[
+  ### RSA - encrypt
+  ##### RSA - KeyGen()
+  ```
+  n = p * q
+  e = f1(p,q)
+  pk = (e, n)
+  sk = (f2(e), n)
+  ```
+  ##### RSA - Enc(pk, m)
+  `\(c = m^{e}\ mod\ n\)`
+  ##### RSA - Dec(sk, m)
+  `\(m = c^{sk}\ mod\ n\)`
+]
 
+--
+
+.col-8[
+  ### Formalized RSA problem
+  * If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`.
+
+  * RSA is secure under the prime factorization difficulty
+
+  * `Boudot et Al. 2019`: around 500K core-years to factorize 1024-bit RSA key
+  * ... with a non-quantum computer
+  * No other known method to attack RSA
+]
+
+---
+
+.col-6[
+  ### RSA - Sign
+  ##### RSA - KeyGen()
+  ```
+  n = p * q
+  e = f1(p,q)
+  pk = (e, n)
+  sk = (f2(e), n)
+  ```
+  ##### RSA - Sign(sk, m)
+  `\(s = hash(m)^{sk}\ mod\ n\)`
+
+  ##### RSA - Verify(pk, m)
+  `\(h = hash(m)\)`
+
+  `\(h' = s^{e}\ mod\ n\)`
+
+  OK if `\(h=h'\)`
+]
+
+--
+
+.col-6[
+  ### Formalized RSA problem
+  * If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`.
+
+  * RSA is secure under the prime factorization difficulty
+
+  * `Boudot et Al. 2019`: around 500K core-years to factorize 1024-bit RSA key
+  * ... with a non-quantum computer
+  * No other known method to attack RSA
+]
+
+---
+class: impact, center, middle
+
+#RSA is proven secure as long as prime factorization is hard !
 ---
 
 # Quantum Computer
@@ -93,22 +156,21 @@ By Willy Malvault
 ]
 
 .col-6[
-  ![IQM_Quantum_Computer_Espoo_Finland](./images/IQM_Quantum_Computer_Espoo_Finland.jpg)
-  #### IQM Quantum Computer Espoo Finland
+  ![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg)
+  #### IBM Q System One QComputer
 ]
 
 ---
 
-# Quantum Computer in 2022
+# Factorizing 15
 .col-6[
 * lalala
 
-* lalalala
+* [IBM research blog](https://research.ibm.com/blog/factor-15-shors-algorithm)
 ]
 
 .col-6[
-  ![A_Wafer_of_the_Latest_D-Wave_Quantum_Computers](./images/A_Wafer_of_the_Latest_D-Wave_Quantum_Computers.jpg)
-  #### Wafer of D-wave quantum computers
+  ![A_Wafer_of_the_Latest_D-Wave_Quantum_Computers](./images/Researchers_Lieven_Vandersypen_L_and_Matthias_Steffen_R.png.jpg)
 ]
 ---
 
