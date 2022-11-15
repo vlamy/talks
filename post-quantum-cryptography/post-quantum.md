@@ -5,60 +5,51 @@ layout: true
 ---
 
 class: impact
+background-image: url(./images/home.png)
 
-# Post quantum cryptography
-## Achievement unlocked with .red[{Kyber}] and .red[{Dilithium}]
+# Post Quantum Cryptography, the future of Internet
 
-By Willy Malvault
-
----
-
-# Once again, an Internet story...
-
-.col-6[
-* Public, federated, unpredictable and untrusted network
-
-* Needs
-  * Authentication
-  * Confidentiality
-]
-
-.col-6[![WAN with media](./images/wan-cloud-with-media.png)]
+#### Willy Malvault
+#### Snowcamp 2023
 
 ---
 
-# Public Key Cryptography
+class: center
+
+# Once upon a time, an Internet story...
+
+
+![WAN with media](./images/wan-cloud-with-media.png)
+
+---
+## Public key cryptography
 
 .col-6[
-  ## Public key encryption
-  <!-- Set of 3 probabilistic algorithms -->
-  ```
-  pk,sk := KeyGen()
-  c := Enc(pk, m)
-  m := Dec(sk, m)
-  ```
+```
+pk,sk := KeyGen()
+```
 
-  `pk` is published
-
-  `sk` is kept secret
-
-  Anyone knowing `pk` can crypt messages that only `sk` holder would be able to decrypt.
+#### Encryption scheme
+```
+c := Enc(pk, m)
+m := Dec(sk, m)
+```
+Confidentiality
 ]
 
---
-
 .col-6[
-  ## Digital signature scheme
-  <!-- Set of 3 probabilistic algorithms -->
-  ```
-  pk,sk := KeyGen()
-  s := Sign(sk, m)
-  v := Verify(pk, m, v)
-  ```
 
-  Only `sk` holder can sign a message
+```
+pk,sk := KeyGen()
+```
 
-  Anyone knowing `pk`, `m` and `s` can verify the signature
+#### Digital signature scheme
+```
+s := Sign(sk, m)
+v := Verify(pk, m, v)
+```
+
+Authentication
 ]
 ---
 
@@ -70,17 +61,18 @@ By Willy Malvault
 ]
 
 .col-6[
-* Provably secure according to **prime numbers factorization difficulty**
+* Provably secure according to .red[**prime numbers factorization**] difficulty
 
 * Provides
     * Public key encryption
     * Digital signature
+
+* inspire other protocols: DSA, ECDSA, etc..
 ]
 
 ---
 
 .col-4[
-  ### RSA - encrypt
   ##### RSA - KeyGen()
   ```
   n = p * q
@@ -100,17 +92,13 @@ By Willy Malvault
   ### Formalized RSA problem
   * If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`.
 
-  * RSA is secure under the prime factorization difficulty
-
   * `Boudot et Al. 2019`: around 500K core-years to factorize 1024-bit RSA key
-  * ... with a non-quantum computer
-  * No other known method to attack RSA
 ]
 
 ---
+## RSA - Sign
 
 .col-6[
-  ### RSA - Sign
   ##### RSA - KeyGen()
   ```
   n = p * q
@@ -118,6 +106,11 @@ By Willy Malvault
   pk = (e, n)
   sk = (f2(e), n)
   ```
+]
+
+--
+
+.col-6[
   ##### RSA - Sign(sk, m)
   `\(s = hash(m)^{sk}\ mod\ n\)`
 
@@ -129,23 +122,6 @@ By Willy Malvault
   OK if `\(h=h'\)`
 ]
 
---
-
-.col-6[
-  ### Formalized RSA problem
-  * If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`.
-
-  * RSA is secure under the prime factorization difficulty
-
-  * `Boudot et Al. 2019`: around 500K core-years to factorize 1024-bit RSA key
-  * ... with a non-quantum computer
-  * No other known method to attack RSA
-]
-
----
-class: impact, center, middle
-
-#RSA is proven secure as long as prime factorization is hard !
 ---
 
 # Quantum Computer
@@ -172,16 +148,61 @@ class: impact, center, middle
 .col-6[
   ![A_Wafer_of_the_Latest_D-Wave_Quantum_Computers](./images/Researchers_Lieven_Vandersypen_L_and_Matthias_Steffen_R.png.jpg)
 ]
+
+---
+class: center
+
+![McKinsey prepare for qutum cryptography](./images/risks.png)
+
+> [McKinsey - when-and-how-to-prepare-for-post-quantum-cryptography](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/when-and-how-to-prepare-for-post-quantum-cryptography)
+
+---
+
+# Post Quantum Cryptography (PQC)
+
+.col-6[
+## Quantum Cryptography
+Using quantum channels to exchange private keys.
+> Quote BB84
+]
+
+.col-6[
+## Post-auantum Cryptography
+Use traditionnal computers to use cryptography schemes robust to quatume attacks.
+]
+
+---
+
+# That is a big problem
+
+## NIST challenge to explain
+
+## Kyber, dilithium, etc...
+
+---
+
+# Lattice based encryption
+
+## Lattice based encryption explained
+[video on lattice based crypto](https://www.youtube.com/watch?v=832mo7IVJug)
+[Better video on Kyber/Lattices](https://www.youtube.com/watch?v=FUb75AUXMvw)
+
+---
+
+# Kyber in analytics version
+
+[Better video on Kyber/Lattices](https://www.youtube.com/watch?v=FUb75AUXMvw)
+
+---
+class: impact, center, middle
+
+# BREAK
+
 ---
 
 # Todolist
 * how about ECDCA, elliptic curve and PQC ?
 
----
-
-class: impact, center, middle
-
-# BREAK
 ---
 
 # Display and Inline Math formulae
@@ -192,44 +213,6 @@ class: impact, center, middle
 Display formula:
 
 $$e^{i\pi} + 1 = 0$$
-
----
-
-class: full, center
-
-# Post Quantum Cryptography (PQC)
-
-## What's the problem ?
-
-.col-4[
-  ## Asymetric cryptography
-
-  * crypt Internet traffic (TLS, SSH, etc.)
-  * sign content (software binaries, etc.)
-]
-
---
-.col-4[
-  ## Quantum Computing
-
-  * crypt Internet traffic (TLS, SSH, etc.)
-  * sign content (software binaries, etc.)
-]
-
---
-
-.col-4[
-  ## [Shor's algorithm](https://fr.wikipedia.org/wiki/Algorithme_de_Shor)
-  Breaks legacy cryptography using quantum computing
-]
-
----
-# Math testing
-`\( \phi(x) = \frac{1}{\sqrt{2 \pi}} e^{-\frac{x^2}{2}} \)` and its CDF,
-
-`\[
-\Phi(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^x e^{-\frac{s^2}{2}}ds
-\]`
 
 ---
 
@@ -330,8 +313,6 @@ vector in Zq , and e is a vector with random “small” coefficients chosen fro
 
 ## Learning With Errors (LWE)
 The design of Kyber has its roots in the seminal LWE-based encryption scheme of Regev. Since Regev's original work, the practical efficiency of LWE encryption schemes has been improved by observing that the secret in LWE can come from the same distribution as the noise and also noticing that "LWE-like" schemes can be built by using a square (rather than a rectangular) matrix as the public key. Another improvement was applying an idea originally used in the NTRU cryptosystem to define the Ring-LWE and Module-LWE problems that used polynomial rings rather than integers. The CCA-secure KEM Kyber is built on top of a CPA-secure cryptosystem that is based on the hardness of Module-LWE.
-
-## module lattice
 
 ## Resources
 * [Kyber source code](https://github.com/pq-crystals/kyber)
