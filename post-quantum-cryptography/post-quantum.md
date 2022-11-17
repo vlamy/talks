@@ -16,7 +16,7 @@ background-image: url(./images/home.png)
 
 class: center
 
-# Once upon a time, an Internet story...
+# Once upon a time, Internet...
 
 
 ![WAN with media](./images/wan-cloud-with-media.png)
@@ -57,7 +57,7 @@ Authentication
 
 .col-6[
 ![rivest shamir adleman](./images/rsa-2.jpg)
-#### Rivest-Shamir-Adelman (RSA) 1977
+> Ronald L. Rivest, Adi Shamir, Leonard M. Adleman: A Method for Obtaining Digital Signatures and Public-Key Cryptosystems. Commun. ACM 21(2): 120-126 (1978)
 ]
 
 .col-6[
@@ -73,60 +73,47 @@ Authentication
 ---
 
 .col-4[
-  ##### RSA - KeyGen()
+  RSA - KeyGen()
   ```
   n = p * q
   e = f1(p,q)
   pk = (e, n)
   sk = (f2(e), n)
   ```
-  ##### RSA - Enc(pk, m)
+  RSA - Enc(pk, m)
   `\(c = m^{e}\ mod\ n\)`
-  ##### RSA - Dec(sk, m)
+
+  RSA - Dec(sk, m)
   `\(m = c^{sk}\ mod\ n\)`
+
+  RSA - Sign(sk, m)
+  `\(s = hash(m)^{sk}\ mod\ n\)`
 ]
 
 --
 
 .col-8[
+  RSA - Verify(pk, m)
+
+  `\(h = hash(m)\)`
+  `\(h' = s^{e}\ mod\ n\)`
+  OK if `\(h=h'\)`
+
   ### Formalized RSA problem
   * If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`.
-
-  * `Boudot et Al. 2019`: around 500K core-years to factorize 1024-bit RSA key
+  * around 1000 core-years to factorize RSA-768 (record)
+  > Fabrice Boudot, Pierrick Gaudry, Aurore Guillevic, Nadia Heninger, Emmanuel Thomé, Paul Zimmermann: Comparing the difficulty of factorization and discrete logarithm: a 240-digit experiment. IACR Cryptol. ePrint Arch. 2020: 697 (2020)
 ]
 
 ---
-## RSA - Sign
-
-.col-6[
-  ##### RSA - KeyGen()
-  ```
-  n = p * q
-  e = f1(p,q)
-  pk = (e, n)
-  sk = (f2(e), n)
-  ```
-]
-
---
-
-.col-6[
-  ##### RSA - Sign(sk, m)
-  `\(s = hash(m)^{sk}\ mod\ n\)`
-
-  ##### RSA - Verify(pk, m)
-  `\(h = hash(m)\)`
-
-  `\(h' = s^{e}\ mod\ n\)`
-
-  OK if `\(h=h'\)`
-]
+class: impact, middle, center
+# But ...
 
 ---
 
 # Quantum Computer
 .col-6[
-* lalala
+* ![blocsphere from wikipedia](./images/blocsphere.png)
 
 * lalalala
 ]
@@ -135,6 +122,11 @@ Authentication
   ![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg)
   #### IBM Q System One QComputer
 ]
+
+---
+class: center
+
+![Quantum Computer schema](./images/computer-schema.jpg)
 
 ---
 
@@ -193,6 +185,12 @@ Use traditionnal computers to use cryptography schemes robust to quatume attacks
 
 [Better video on Kyber/Lattices](https://www.youtube.com/watch?v=FUb75AUXMvw)
 
+---
+
+# Resources
+
+### Post quatum Cryptography
+* [https://www.nist.gov/cryptography](https://www.nist.gov/cryptography)
 ---
 class: impact, center, middle
 
