@@ -9,20 +9,27 @@ background-image: url(./images/home.png)
 
 # Post Quantum Cryptography, the future of Internet
 
-#### Willy Malvault
-#### Snowcamp 2023
+## Willy Malvault - Snowcamp 2023
 
 ---
 
 class: center
 
-# Once upon a time, Internet...
+# It all starts the 6th of July 2022...
 
 
-![WAN with media](./images/wan-cloud-with-media.png)
+![Tweet from Stéphane Bortzmeyer](./images/Tweet-sb.png)
 
 ---
-## Public key cryptography
+## I'm Willy Malvault ....
+
+---
+# The crypto zoo
+
+![Cruypto usage](./images/Crypto_Zoo.png)
+
+---
+## Public key cryptography scheme
 
 .col-6[
 ```
@@ -67,47 +74,78 @@ Authentication
     * Public key encryption
     * Digital signature
 
-* inspire other protocols: DSA, ECDSA, etc..
+* Have brothers and sisters: DSA, ECDSA, etc..
 ]
 
 ---
+### Prime number factorization
+![factorization is hard](images/PxQ-0.png)
+
+---
+### Prime number factorization
+![factorization is hard](images/PxQ-1.png)
+
+---
+### Prime number factorization
+![factorization is hard](images/PxQ-2.png)
+
+---
+### Prime number factorization
+![factorization is hard](images/PxQ-3.png)
+
+---
+# RSA cryptosystem
 
 .col-4[
-  RSA - KeyGen()
+  KeyGen()
   ```
   n = p * q
+
   e = f1(p,q)
+
   pk = (e, n)
+
   sk = (f2(e), n)
   ```
-  RSA - Enc(pk, m)
+]
+
+.col-4[
+  Enc(pk, m)
+
   `\(c = m^{e}\ mod\ n\)`
 
-  RSA - Dec(sk, m)
-  `\(m = c^{sk}\ mod\ n\)`
+  Dec(sk, m)
 
-  RSA - Sign(sk, m)
-  `\(s = hash(m)^{sk}\ mod\ n\)`
+  `\(m = c^{sk}\ mod\ n\)`
 ]
 
 --
 
-.col-8[
-  RSA - Verify(pk, m)
+.col-4[
+  Sign(sk, m)
+
+  `\(s = hash(m)^{sk}\ mod\ n\)`
+
+  Verify(pk, m)
 
   `\(h = hash(m)\)`
-  `\(h' = s^{e}\ mod\ n\)`
-  OK if `\(h=h'\)`
 
-  ### Formalized RSA problem
-  * If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`.
-  * around 1000 core-years to factorize RSA-768 (record)
-  > Fabrice Boudot, Pierrick Gaudry, Aurore Guillevic, Nadia Heninger, Emmanuel Thomé, Paul Zimmermann: Comparing the difficulty of factorization and discrete logarithm: a 240-digit experiment. IACR Cryptol. ePrint Arch. 2020: 697 (2020)
+  `\(h' = s^{e}\ mod\ n\)`
+
+  OK if `\(h=h'\)`
 ]
 
 ---
-class: impact, middle, center
-# But ...
+# Formalized RSA problem
+### If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`
+
+It takes around 1000 core-years to factorize RSA-768 (record), with a classical computer.
+
+> Fabrice Boudot, Pierrick Gaudry, Aurore Guillevic, Nadia Heninger, Emmanuel Thomé, Paul Zimmermann: Comparing the difficulty of factorization and discrete logarithm: a 240-digit experiment. IACR Cryptol. ePrint Arch. 2020: 697 (2020)
+
+--
+
+## But... this stands only for classical computers
 
 ---
 
@@ -126,7 +164,7 @@ class: impact, middle, center
 ---
 class: center
 
-![Quantum Computer schema](./images/computer-schema.jpg)
+![Quantum Computer schema](./images/Quantum-computer-sketch.png)
 
 ---
 
@@ -190,6 +228,7 @@ Use traditionnal computers to use cryptography schemes robust to quatume attacks
 # Resources
 
 ### Post quatum Cryptography
+* [Article de Stéphane Bortzmeyer sur l'annonce su NIST](https://www.bortzmeyer.org/nist-pq.html)
 * [https://www.nist.gov/cryptography](https://www.nist.gov/cryptography)
 ---
 class: impact, center, middle

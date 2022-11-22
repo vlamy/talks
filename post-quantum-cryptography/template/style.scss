@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 h1 {
-  background: linear-gradient(90deg, #E7B96C 0%, #C64163 48.96%, #852798 100%);
+  background: linear-gradient(90deg, #E7B96C 0%, #852798 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,12 +97,14 @@ pre, code {
   background: $code-background;
 }
 a, a:visited, a:hover, a:active { color: $tertiary; }
-img { vertical-align: inherit; }
+img {
+  vertical-align: inherit;
+  object-fit: contain;
+}
 blockquote {
   font-family: 'Poppins';
   font-style: normal;
-  font-size: 22px;
-  line-height: 24px;
+  font-size: 30px;
   border-left: 5px solid;
   padding-left: .5em;
   color: $yellow;
