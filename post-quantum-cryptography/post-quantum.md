@@ -29,35 +29,36 @@ class: center
 ![Cruypto usage](./images/Crypto_Zoo.png)
 
 ---
-## Public key cryptography scheme
+# Public key cryptography scheme
 
-.col-6[
-```
-pk,sk := KeyGen()
-```
+![crypto scheme](./images/crypto-scheme.png)
+<!-- .col-6[ -->
+<!-- ``` -->
+<!-- pk,sk := KeyGen() -->
+<!-- ``` -->
 
-#### Encryption scheme
-```
-c := Enc(pk, m)
-m := Dec(sk, m)
-```
-Confidentiality
-]
+<!-- #### Encryption scheme -->
+<!-- ``` -->
+<!-- c := Enc(pk, m) -->
+<!-- m := Dec(sk, m) -->
+<!-- ``` -->
+<!-- Confidentiality -->
+<!-- ] -->
 
-.col-6[
+<!-- .col-6[ -->
 
-```
-pk,sk := KeyGen()
-```
+<!-- ``` -->
+<!-- pk,sk := KeyGen() -->
+<!-- ``` -->
 
-#### Digital signature scheme
-```
-s := Sign(sk, m)
-v := Verify(pk, m, v)
-```
+<!-- #### Digital signature scheme -->
+<!-- ``` -->
+<!-- s := Sign(sk, m) -->
+<!-- v := Verify(pk, m, v) -->
+<!-- ``` -->
 
-Authentication
-]
+<!-- Authentication -->
+<!-- ] -->
 ---
 
 # RSA (legacy) cryptosystem
@@ -108,6 +109,8 @@ Authentication
   sk = (f2(e), n)
   ```
 ]
+
+--
 
 .col-4[
   Enc(pk, m)
