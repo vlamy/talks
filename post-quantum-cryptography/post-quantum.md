@@ -29,9 +29,26 @@ class: center
 ![Cruypto usage](./images/Crypto_Zoo.png)
 
 ---
-# Public key cryptography scheme
 
-![crypto scheme](./images/crypto-scheme.png)
+# Public key cryptography scheme
+![crypto scheme](./images/cryptosystem-0.png)
+---
+
+# Public key cryptography scheme
+![crypto scheme](./images/cryptosystem-1.png)
+---
+
+# Public key cryptography scheme
+![crypto scheme](./images/cryptosystem-2.png)
+---
+
+# Public key cryptography scheme
+![crypto scheme](./images/cryptosystem-3.png)
+---
+
+# Public key cryptography scheme
+![crypto scheme](./images/cryptosystem-4.png)
+
 <!-- .col-6[ -->
 <!-- ``` -->
 <!-- pk,sk := KeyGen() -->
@@ -68,6 +85,8 @@ class: center
 > Ronald L. Rivest, Adi Shamir, Leonard M. Adleman: A Method for Obtaining Digital Signatures and Public-Key Cryptosystems. Commun. ACM 21(2): 120-126 (1978)
 ]
 
+--
+
 .col-6[
 * Provably secure according to .red[**prime numbers factorization**] difficulty
 
@@ -102,12 +121,19 @@ class: center
   ```
   n = p * q
 
-  e = f1(p,q)
+  e = ctf(p,q)
 
+  ```
+
+  > e is coprime to Charmichael totient function of n
+
+  ```
   pk = (e, n)
 
-  sk = (f2(e), n)
+  sk = (mmi(e), n)
   ```
+
+  > mmi is modular multiplicative inverse function
 ]
 
 --
@@ -131,24 +157,37 @@ class: center
 
   Verify(pk, m)
 
-  `\(h = hash(m)\)`
+  `\(h = s^{e}\ mod\ n\)`
 
-  `\(h' = s^{e}\ mod\ n\)`
-
-  OK if `\(h=h'\)`
+  OK if `\(hash(m)=h\)`
 ]
 
 ---
-# Formalized RSA problem
-### If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`
+# RSA and Co are working great !
 
-It takes around 1000 core-years to factorize RSA-768 (record), with a classical computer.
+.col-5[
+### Formalized RSA problem
+  If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`
+]
 
-> Fabrice Boudot, Pierrick Gaudry, Aurore Guillevic, Nadia Heninger, Emmanuel Thomé, Paul Zimmermann: Comparing the difficulty of factorization and discrete logarithm: a 240-digit experiment. IACR Cryptol. ePrint Arch. 2020: 697 (2020)
+.col-2[.]
 
 --
+.col-5[
+  It takes around 1000 core-years to factorize RSA-768 (record), with a classical computer.
 
-## But... this stands only for classical computers
+> Fabrice Boudot, Pierrick Gaudry, Aurore Guillevic, Nadia Heninger, Emmanuel Thomé, Paul Zimmermann: Comparing the difficulty of factorization and discrete logarithm: a 240-digit experiment. IACR Cryptol. ePrint Arch. 2020: 697 (2020)
+]
+
+---
+# The crypto zoo with RSA
+
+![Cruypto usage](./images/Crypto_Zoo.png)
+
+---
+class: impact, center, middle
+
+# But... this stands only for classical computers
 
 ---
 
