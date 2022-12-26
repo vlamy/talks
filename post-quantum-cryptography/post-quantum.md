@@ -1,4 +1,4 @@
-title: Post quantum cryoptography : achievement unlock with Kyber and Dilithium
+title: Post quantum cryoptography, the future of Internet
 class: animation-fade
 layout: true
 
@@ -7,26 +7,37 @@ layout: true
 class: impact
 background-image: url(./images/home.png)
 
-# Post Quantum Cryptography, the future of Internet
+# Post Quantum Cryptography, future of the Internet
 
 ## Willy Malvault - Snowcamp 2023
 
 ---
+.col-6[
+## Another Internet story
 
+![The internet schema](./images/wan-cloud-with-media.png)
+]
+
+--
+
+.col-6[
+## I'm Willy Malvault ....
+ * First computer in 1992
+ * First own connection on 2002
+ * Need to understand how it works
+ * First hack in 2002
+ * Study in computer science in 2004
+ * PhD in Distributed Computing in 2011
+ * Help people build greate thinks over the Internet From 2011 to 2023
+]
+
+---
 class: center
 
 # It all starts the 6th of July 2022...
 
 
 ![Tweet from Stéphane Bortzmeyer](./images/Tweet-sb.png)
-
----
-## I'm Willy Malvault ....
-
----
-# The crypto zoo
-
-![Cruypto usage](./images/Crypto_Zoo.png)
 
 ---
 
@@ -49,35 +60,12 @@ class: center
 # Public key cryptography scheme
 ![crypto scheme](./images/cryptosystem-4.png)
 
-<!-- .col-6[ -->
-<!-- ``` -->
-<!-- pk,sk := KeyGen() -->
-<!-- ``` -->
-
-<!-- #### Encryption scheme -->
-<!-- ``` -->
-<!-- c := Enc(pk, m) -->
-<!-- m := Dec(sk, m) -->
-<!-- ``` -->
-<!-- Confidentiality -->
-<!-- ] -->
-
-<!-- .col-6[ -->
-
-<!-- ``` -->
-<!-- pk,sk := KeyGen() -->
-<!-- ``` -->
-
-<!-- #### Digital signature scheme -->
-<!-- ``` -->
-<!-- s := Sign(sk, m) -->
-<!-- v := Verify(pk, m, v) -->
-<!-- ``` -->
-
-<!-- Authentication -->
-<!-- ] -->
 ---
+# The crypto zoo
 
+![Cruypto usage](./images/Crypto_Zoo.png)
+
+---
 # RSA (legacy) cryptosystem
 
 .col-6[
@@ -165,24 +153,22 @@ class: center
 ---
 # RSA and Co are working great !
 
-.col-5[
+.col-6[
 ### Formalized RSA problem
   If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`
-]
 
-.col-2[.]
-
---
-.col-5[
+### Difficulty
   It takes around 1000 core-years to factorize RSA-768 (record), with a classical computer.
 
 > Fabrice Boudot, Pierrick Gaudry, Aurore Guillevic, Nadia Heninger, Emmanuel Thomé, Paul Zimmermann: Comparing the difficulty of factorization and discrete logarithm: a 240-digit experiment. IACR Cryptol. ePrint Arch. 2020: 697 (2020)
 ]
 
----
-# The crypto zoo with RSA
+.col-6[
+### NIST standardization
+> Blablabla
 
-![Cruypto usage](./images/Crypto_Zoo.png)
+![rsa nist](https://csrc.nist.gov/glossary/term/RSA)
+]
 
 ---
 class: impact, center, middle
@@ -191,20 +177,100 @@ class: impact, center, middle
 
 ---
 
-# Quantum Computer
 .col-6[
-* ![blocsphere from wikipedia](./images/blocsphere.png)
-
-* lalalala
+![blocsphere Qubit](./images/Qubit-1.png)
 ]
 
 .col-6[
-  ![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg)
-  #### IBM Q System One QComputer
+## Qubit
+* Is the unit of quantum information
+* With quantum properties
+    * Linear combination of `|0>` and `|1>`
+    * Consistent superposition of the basis states
+    * 𝛼 and 𝛽 are probability amplitudes
+    * **Cannot be copied**
+* And non quantum properties too
+    * Can be measured to `1` or `0`
 ]
 
 ---
+
+.col-6[
+![Qubit superposition](./images/Qubit-2.png)
+]
+
+.col-6[
+## Superposition
+* A Qubit is in all states at ones
+* 𝛼 and 𝛽 represents the probability of finding the qubit in state `|0>` or `|1>`
+* 𝛼 and 𝛽 also hold interference between the superposed state (i.e. we can play with them to have a deterministic outcome)
+]
+
+---
+# A bit of help from wave theory
+
+---
+
+.col-6[
+![Qubit measurement](./images/Qubit-3.png)
+]
+
+.col-6[
+## Measurement
+* Once measured, a qubit is in a deterministic state `|0>` or `|1>`
+* Measurement disrupts the qubit states
+    * Rules are needed to determinate the state of a qubit
+    * Error correction are needed !
+]
+
+---
+
+.col-6[
+![Qubit entanglement](./images/Qubit-4.png)
+]
+
+.col-6[
+## Entanglement
+* Only two qubit can be entangled
+    * No sharing
+    * No more thant 2 qubits
+* Entanglement is preserved according to time and space
+* Measuring the state of an entangled qubit allows to determinate the state of the other qubit
+]
+
+---
+.col-6[.center[.pad-top-150[
+# Why is the qubit so powerfull ?
+]]]
+
+--
+
+.col-6[
+![Qubit and bit states](./images/Qubit-5.png)
+]
+
+---
+# And then comes Quantum Computing
+
+.col-6[
+## Quantum gates
+
+## Quantum circuit
+]
+
+.col-6[
+## Quantum langages
+
+## Quantum computers
+]
+---
+# Shor algorithm
+![Shor Algorithm](./images/shor.png)
+
+---
 class: center
+
+![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg)
 
 ![Quantum Computer schema](./images/Quantum-computer-sketch.png)
 
@@ -269,9 +335,13 @@ Use traditionnal computers to use cryptography schemes robust to quatume attacks
 
 # Resources
 
-### Post quatum Cryptography
+### Quantum Computing
+* [IBM Composer Guide](https://quantum-computing.ibm.com/composer/docs/iqx/guide/)
+
+### Post quantum Cryptography
 * [Article de Stéphane Bortzmeyer sur l'annonce su NIST](https://www.bortzmeyer.org/nist-pq.html)
 * [https://www.nist.gov/cryptography](https://www.nist.gov/cryptography)
+
 ---
 class: impact, center, middle
 

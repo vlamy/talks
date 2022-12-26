@@ -246,6 +246,7 @@ table {
   width: 100%;
   padding: 0 2em;
 }
+.pad-top-150 { padding-top: 150px; }
 .middle { &, & img, & span { vertical-align: middle; } };
 .top { vertical-align: top; };
 .bottom { vertical-align: bottom; };
