@@ -12,61 +12,39 @@ background-image: url(./images/home.png)
 ## Willy Malvault - Snowcamp 2023
 
 ---
-.col-6[
-## Another Internet story
+# On Wednesday 6 of July 2022
+.center[![Tweet Stephane Bortzmeyer](images/Tweet-sb.png)]
 
-![The internet schema](./images/wan-cloud-with-media.png)
-]
+---
+# What is a public key cryptography scheme ?
 
 --
 
-.col-6[
-## I'm Willy Malvault ....
- * First computer in 1992
- * First own connection on 2002
- * Need to understand how it works
- * First hack in 2002
- * Study in computer science in 2004
- * PhD in Distributed Computing in 2011
- * Help people build greate thinks over the Internet From 2011 to 2023
-]
-
----
-class: center
-
-# It all starts the 6th of July 2022...
-
-
-![Tweet from Stéphane Bortzmeyer](./images/Tweet-sb.png)
-
----
-
-# Public key cryptography scheme
 ![crypto scheme](./images/cryptosystem-0.png)
 ---
 
-# Public key cryptography scheme
+# What is a public key cryptography scheme ?
 ![crypto scheme](./images/cryptosystem-1.png)
 ---
 
-# Public key cryptography scheme
+# What is a public key cryptography scheme ?
 ![crypto scheme](./images/cryptosystem-2.png)
 ---
 
-# Public key cryptography scheme
+# What is a public key cryptography scheme ?
 ![crypto scheme](./images/cryptosystem-3.png)
 ---
 
-# Public key cryptography scheme
+# What is a public key cryptography scheme ?
 ![crypto scheme](./images/cryptosystem-4.png)
 
 ---
-# The crypto zoo
+#  Where is it used ?
 
 ![Cruypto usage](./images/Crypto_Zoo.png)
 
 ---
-# RSA (legacy) cryptosystem
+# How to implement public key cryptography ?
 
 .col-6[
 ![rivest shamir adleman](./images/rsa-2.jpg)
@@ -76,6 +54,7 @@ class: center
 --
 
 .col-6[
+### RSA cryptosystem
 * Provably secure according to .red[**prime numbers factorization**] difficulty
 
 * Provides
@@ -131,7 +110,7 @@ class: center
 
   `\(c = m^{e}\ mod\ n\)`
 
-  Dec(sk, m)
+  Dec(sk, c)
 
   `\(m = c^{sk}\ mod\ n\)`
 ]
@@ -167,7 +146,8 @@ class: center
 ### NIST standardization
 > Blablabla
 
-![rsa nist](https://csrc.nist.gov/glossary/term/RSA)
+[rsa nist standardization](https://csrc.nist.gov/glossary/term/RSA)
+
 ]
 
 ---
@@ -203,11 +183,18 @@ class: impact, center, middle
 ## Superposition
 * A Qubit is in all states at ones
 * 𝛼 and 𝛽 represents the probability of finding the qubit in state `|0>` or `|1>`
-* 𝛼 and 𝛽 also hold interference between the superposed state (i.e. we can play with them to have a deterministic outcome)
+* and also, they can have interferences ...
 ]
 
 ---
-# A bit of help from wave theory
+.col-6[
+![qubit as wave](./images/waves-2.png)
+]
+
+## Phase interference
+* 𝛼 and 𝛽 can have constructive interference
+* 𝛼 and 𝛽 can have destructive interference
+* Interferences can produce a deterministic qubit state
 
 ---
 
@@ -236,6 +223,7 @@ class: impact, center, middle
     * No more thant 2 qubits
 * Entanglement is preserved according to time and space
 * Measuring the state of an entangled qubit allows to determinate the state of the other qubit
+* There is neither teleportation nor time travel her !
 ]
 
 ---
@@ -250,41 +238,38 @@ class: impact, center, middle
 ]
 
 ---
-# And then comes Quantum Computing
+# Things Quantum Computing is good at
 
 .col-6[
-## Quantum gates
-
-## Quantum circuit
+### Nuclear
+### Pharma
+### Combinatory
 ]
 
 .col-6[
-## Quantum langages
-
-## Quantum computers
+### Articficial intelligence
+### Breaking RSA !
 ]
+
 ---
 # Shor algorithm
-![Shor Algorithm](./images/shor.png)
-
----
-class: center
-
-![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg)
-
-![Quantum Computer schema](./images/Quantum-computer-sketch.png)
-
----
-
-# Factorizing 15
 .col-6[
-* lalala
-
-* [IBM research blog](https://research.ibm.com/blog/factor-15-shors-algorithm)
+![Shor Algorithm](./images/shor.png)
 ]
 
 .col-6[
-  ![A_Wafer_of_the_Latest_D-Wave_Quantum_Computers](./images/Researchers_Lieven_Vandersypen_L_and_Matthias_Steffen_R.png.jpg)
+]
+
+---
+.col-5[
+### Should we be afraid yet ?
+![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg)
+]
+
+--
+
+.col-7[
+![Quantum Computer schema](./images/Quantum-computer-sketch.png)
 ]
 
 ---
@@ -292,38 +277,72 @@ class: center
 
 ![McKinsey prepare for qutum cryptography](./images/risks.png)
 
-> [McKinsey - when-and-how-to-prepare-for-post-quantum-cryptography](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/when-and-how-to-prepare-for-post-quantum-cryptography)
 
 ---
+# The solutions to Quantum Threat
 
-# Post Quantum Cryptography (PQC)
-
-.col-6[
 ## Quantum Cryptography
 Using quantum channels to exchange private keys.
-> Quote BB84
+
+> C. H. Bennett and G. Brassard. "Quantum cryptography: Public key distribution and coin tossing". In Proceedings of IEEE International Conference on Computers, Systems and Signal Processing, volume 175, page 8. New York, 1984
+
+--
+
+## Post-quantum Cryptography
+Use traditionnal computers to use cryptography schemes robust to quatume attacks.
+
+---
+class: center
+
+## NIST PQC challenge
+![NIST PQC standardization page screenshot](/images/NIST-standardization.png)
+
+---
+# Selected protocols
+### Public Key encryption and key-establishment
+[Kyber](https://pq-crystals.org/): an IND-CCA2-secure key-encapsulation mechanism (KEM)
+
+### Digital signature
+[Dilithium](https://pq-crystals.org/): a strongly EUF-CMA-secure digital signature algorithm
+
+[Falcon](https://falcon-sign.info/): Fast-Fourier lattice-based compact signatures over NTRU
+
+[SPHINCS+](https://sphincs.org/): is a stateless hash-based signature scheme.
+
+---
+.col-6[
+### Introduction to lattice
+
+* Infinite set of points in some N dimensional space
 ]
 
 .col-6[
-## Post-auantum Cryptography
-Use traditionnal computers to use cryptography schemes robust to quatume attacks.
+![lattice schema](./images/Lattice-0.png)
 ]
 
 ---
+.col-6[
+### Introduction to lattice
 
-# That is a big problem
+* Infinite set of points in some N dimensional space
+* Linear combination of vectors from a basis {b1, ...bN} of RN.
+]
 
-## NIST challenge to explain
-
-## Kyber, dilithium, etc...
+.col-6[
+![lattice schema](./images/Lattice-1.png)
+]
 
 ---
+.col-6[
+### Introduction to lattice
 
-# Lattice based encryption
+* Infinite set of points in some N dimensional space
+* Linear combination of vectors from a basis {b1, ...bN} of RN.
+]
 
-## Lattice based encryption explained
-[video on lattice based crypto](https://www.youtube.com/watch?v=832mo7IVJug)
-[Better video on Kyber/Lattices](https://www.youtube.com/watch?v=FUb75AUXMvw)
+.col-6[
+![lattice schema](./images/Lattice-2.png)
+]
 
 ---
 
@@ -340,7 +359,25 @@ Use traditionnal computers to use cryptography schemes robust to quatume attacks
 
 ### Post quantum Cryptography
 * [Article de Stéphane Bortzmeyer sur l'annonce su NIST](https://www.bortzmeyer.org/nist-pq.html)
-* [https://www.nist.gov/cryptography](https://www.nist.gov/cryptography)
+* [NIST PQC standardization page](https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization)
+* [McKinsey - when-and-how-to-prepare-for-post-quantum-cryptography](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/when-and-how-to-prepare-for-post-quantum-cryptography)
+
+## Lattice based encryption explained
+[video on lattice based crypto](https://www.youtube.com/watch?v=832mo7IVJug)
+[Better video on Kyber/Lattices](https://www.youtube.com/watch?v=FUb75AUXMvw)
+
+---
+
+# Factorizing 15
+.col-6[
+* lalala
+
+* [IBM research blog](https://research.ibm.com/blog/factor-15-shors-algorithm)
+]
+
+.col-6[
+  ![A_Wafer_of_the_Latest_D-Wave_Quantum_Computers](./images/Researchers_Lieven_Vandersypen_L_and_Matthias_Steffen_R.png.jpg)
+]
 
 ---
 class: impact, center, middle
