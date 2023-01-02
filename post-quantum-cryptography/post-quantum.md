@@ -165,9 +165,8 @@ class: impact, center, middle
 ## Qubit
 * Is the unit of quantum information
 * With quantum properties
-    * Linear combination of `|0>` and `|1>`
-    * Consistent superposition of the basis states
-    * 𝛼 and 𝛽 are probability amplitudes
+    * Superposition of basis states `\( | 0 \rangle \)` and `\( | 1 \rangle \)`
+    * Quantum entanglement
     * **Cannot be copied**
 * And non quantum properties too
     * Can be measured to `1` or `0`
@@ -181,9 +180,10 @@ class: impact, center, middle
 
 .col-6[
 ## Superposition
-* A Qubit is in all states at ones
-* 𝛼 and 𝛽 represents the probability of finding the qubit in state `|0>` or `|1>`
-* and also, they can have interferences ...
+* A Qubit state is `\( | \psi \rangle\ =\ \alpha | 0 \rangle \ +\ \beta | 1 \rangle \)`
+* `\( \alpha \)` and `\( \beta \)` are the probability amplitude of the qubit to be in the basic states `\( | 0 \rangle \)` or `\( | 1 \rangle \)`
+* **The Qubit is said to be in all states at once**
+* And... `\( \alpha \)` and `\( \beta \)` can have interferences ...
 ]
 
 ---
@@ -192,8 +192,8 @@ class: impact, center, middle
 ]
 
 ## Phase interference
-* 𝛼 and 𝛽 can have constructive interference
-* 𝛼 and 𝛽 can have destructive interference
+* `\( \alpha \)` and `\( \beta \)` can have constructive interference
+* `\( \alpha \)` and `\( \beta \)` can have destructive interference
 * Interferences can produce a deterministic qubit state
 
 ---
@@ -204,10 +204,12 @@ class: impact, center, middle
 
 .col-6[
 ## Measurement
-* Once measured, a qubit is in a deterministic state `|0>` or `|1>`
+* Once measured, a qubit is in a deterministic state `\( | 0 \rangle \)` or `\( | 1 \rangle \)`
 * Measurement disrupts the qubit states
     * Rules are needed to determinate the state of a qubit
     * Error correction are needed !
+
+Note: Errors management without copy is hell !
 ]
 
 ---
@@ -252,12 +254,12 @@ class: impact, center, middle
 ]
 
 ---
-# Shor algorithm
 .col-6[
-![Shor Algorithm](./images/shor.png)
+# Shor algorithm
 ]
 
 .col-6[
+![Shor Algorithm](./images/shor.png)
 ]
 
 ---
@@ -311,7 +313,8 @@ class: center
 
 ---
 .col-6[
-### Introduction to lattice
+## Introduction to lattice
+### Definition
 
 * Infinite set of points in some N dimensional space
 ]
@@ -322,10 +325,11 @@ class: center
 
 ---
 .col-6[
-### Introduction to lattice
-
+## Introduction to lattice
+### Definition
 * Infinite set of points in some N dimensional space
-* Linear combination of vectors from a basis {b1, ...bN} of RN.
+* Linear combination of vectors from a basis `\({b_1, b_2, ...b_N}\)` of `\(\mathbb{R}^N\)`
+* `\( L= \left\{ \sum a_{i} {b} _{i}\ :\ a_{i}\in \mathbb {Z} \right\} \)`
 ]
 
 .col-6[
@@ -334,14 +338,115 @@ class: center
 
 ---
 .col-6[
-### Introduction to lattice
-
+## Introduction to lattice
+### Definition
 * Infinite set of points in some N dimensional space
-* Linear combination of vectors from a basis {b1, ...bN} of RN.
+* Linear combination of vectors from a basis `\({b_1, b_2, ...b_N}\)` of `\(\mathbb{R}^N\)`
+* `\( L= \left\{ \sum a_{i} {b} _{i}\ :\ a_{i}\in \mathbb {Z} \right\} \)`
+
+### fundamental hard problem
+* Closest Vector Problem (CVP)
+* Shortest Vector Problem (SVP)
 ]
 
 .col-6[
 ![lattice schema](./images/Lattice-2.png)
+]
+
+---
+.col-6[
+## Lattice based encryption
+### Encrypt
+* Good basis `\((b_1, b_2)\)` is the private key
+* Bad basis `\((b_1', b_2')\)` is the public key
+* Encode bit with coordinates of a lattice point (according to public key, by instance)
+]
+
+.col-6[
+![lattice schema](./images/Lattice-4.png)
+]
+
+---
+.col-6[
+## Lattice based encryption
+### Encrypt
+* Good basis `\((b_1, b_2)\)` is the private key
+* Bad basis `\((b_1', b_2')\)` is the public key
+* Encode bit with coordinates of a lattice point (according to public key, by instance)
+
+### Encrypt
+* Try to surround the point
+]
+
+
+.col-6[
+![lattice schema](./images/Lattice-5.png)
+]
+
+---
+.col-6[
+## Lattice based encryption
+### Encrypt
+* Good basis `\((b_1, b_2)\)` is the private key
+* Bad basis `\((b_1', b_2')\)` is the public key
+* Encode bit with coordinates of a lattice point (according to public key, by instance)
+
+### Encrypt
+* Try to surround the point
+* Easy to find with good basis
+]
+
+
+.col-6[
+![lattice schema](./images/Lattice-6.png)
+]
+
+---
+.col-6[
+## Lattice based encryption
+### Encrypt
+* Good basis `\((b_1, b_2)\)` is the private key
+* Bad basis `\((b_1', b_2')\)` is the public key
+* Encode bit with coordinates of a lattice point (according to public key, by instance)
+
+### Encrypt
+* Try to surround the point
+* Easy to find with good basis
+* Hard to find with bad basis (or no basis)
+]
+
+
+.col-6[
+![lattice schema](./images/Lattice-7.png)
+]
+
+---
+.col-6[
+## Lattice based digital signature
+### Principle
+* Encode document with point in space
+* Closest Vector is the signature
+]
+
+
+.col-6[
+![lattice schema](./images/Lattice-8.png)
+]
+
+---
+.col-6[
+## Lattice based digital signature
+### Principle
+* Encode document with point in space
+* Closest Vector is the signature
+
+### Disadvantages
+* Informations about private key can leak with a great number of signatures.
+]
+
+
+.col-6[
+![lattice schema](./images/Lattice-9.png)
 ]
 
 ---
