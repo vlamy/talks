@@ -339,16 +339,23 @@ table {
   }
 }
 
+@for $i from 1 through 12 {
+  .col-#{$i} { width: math.div(100%, 12) * $i; }
+}
+
+// [class^="mid-"] {
+// }
+
+@for $i from 1 through 12 {
+  .mid-#{$i} { padding-top: #{$i}em; }
+}
+
 .rsa-img {
   position: absolute;
   top: 4em;
   right: 2em;
   opacity: 0.6;
   z-index: 10;
-}
-
-@for $i from 1 through 12 {
-  .col-#{$i} { width: math.div(100%, 12) * $i; }
 }
 
 // Animations

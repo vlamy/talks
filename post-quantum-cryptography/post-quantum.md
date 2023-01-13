@@ -152,10 +152,9 @@ background-image: url(./images/home.png)
 # RSA is working great !
 
 .col-6[
-### Formalized RSA problem
+### The RSA problem/challenge
   If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`
 
-### Difficulty
   It takes around 1000 core-years to factorize RSA-768 (record), with a classical computer.
 
 > Fabrice Boudot, Pierrick Gaudry, Aurore Guillevic, Nadia Heninger, Emmanuel Thomé, Paul Zimmermann: Comparing the difficulty of factorization and discrete logarithm: a 240-digit experiment. IACR Cryptol. ePrint Arch. 2020: 697 (2020)
@@ -181,61 +180,72 @@ class: center
 
 ![Quantum Computer](./images/q-one-2.png)
 <!-- ![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg) -->
----
 
-.col-6[
+---
+class: middle
+
+.col-5[
 ![blocsphere Qubit](./images/Qubit-1.png)
 ]
 
-.col-6[
+.col-7[
+.mid-3[
 ## Qubit
-* Is the unit of quantum information
-* With quantum properties
+* Unit of quantum information with:
     * Superposition of basis states `\( | 0 \rangle \)` and `\( | 1 \rangle \)`
-    * Quantum entanglement
+    * Entanglement
     * **Cannot be copied**
 * And non quantum properties too
     * Can be measured to `1` or `0`
 ]
+]
 
 ---
 
-.col-6[
+.col-5[
 ![Qubit superposition](./images/Qubit-2.png)
 ]
 
-.col-6[
+.col-7[
+.mid-3[
 ## Superposition
-* A Qubit state is `\( | \psi \rangle\ =\ \alpha | 0 \rangle \ +\ \beta | 1 \rangle \)`
+* Qubit state: `\( | \psi \rangle\ =\ \alpha | 0 \rangle \ +\ \beta | 1 \rangle \)`
 * `\( \alpha \)` and `\( \beta \)` are the probability amplitude of the qubit to be in the basic states `\( | 0 \rangle \)` or `\( | 1 \rangle \)`
 * **The Qubit is said to be in all states at once**
 * And... `\( \alpha \)` and `\( \beta \)` can have interferences ...
 ]
+]
 
 ---
-.col-6[
+.col-5[
 ![qubit as wave](./images/waves-2.png)
 ]
 
+.col-7[
+.mid-4[
 ## Phase interference
 * `\( \alpha \)` and `\( \beta \)` can have constructive interference
 * `\( \alpha \)` and `\( \beta \)` can have destructive interference
 * Interferences can produce a deterministic qubit state
+]
+]
 
 ---
 
-.col-6[
+.col-5[
 ![Qubit measurement](./images/Qubit-3.png)
 ]
 
-.col-6[
+.col-7[
+.mid-3[
 ## Measurement
 * Once measured, a qubit is in a deterministic state `\( | 0 \rangle \)` or `\( | 1 \rangle \)`
 * Measurement disrupts the qubit states
-    * Rules are needed to determinate the state of a qubit
+    * Rules are determinating the final state
     * Error correction are needed !
 
 Note: Errors management without copy is hell !
+]
 ]
 
 ---
@@ -245,6 +255,7 @@ Note: Errors management without copy is hell !
 ]
 
 .col-6[
+.mid-3[
 ## Entanglement
 * Only two qubit can be entangled
     * No sharing
@@ -252,6 +263,7 @@ Note: Errors management without copy is hell !
 * Entanglement is preserved according to time and space
 * Measuring the state of an entangled qubit allows to determinate the state of the other qubit
 * There is neither teleportation nor time travel her !
+]
 ]
 
 ---
@@ -266,7 +278,7 @@ Note: Errors management without copy is hell !
 ]
 
 ---
-# Things Quantum Computing is good at
+# What is quantum supremacy ?
 
 .col-6[
 ### Nuclear
@@ -280,17 +292,30 @@ Note: Errors management without copy is hell !
 ]
 
 ---
-.col-6[
 # Shor algorithm
+
+.col-7[
+> Peter W. Shor: Algorithms for Quantum Computation: Discrete Logarithms and Factoring. FOCS 1994: 124-134
+
+.mid-2[
+
+Finds factors of a prime integer in `\(O(\log{}n)\)`
+* Factored 15 in 2001
+* Factored 21 in 2012
+* Failed to factor 35 in 2019
+* ~10 000 qubits needed to break 2048 bit RSA
+* Last IBM  'Osprey' (09/11/2022) is 433-qubit
+]
 ]
 
-.col-6[
+.col-5[
 ![Shor Algorithm](./images/shor.png)
 ]
 
 ---
+# Should we be afraid of the monster ?
+
 .col-5[
-### Should we be afraid yet ?
 ![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg)
 ]
 
@@ -300,6 +325,7 @@ Note: Errors management without copy is hell !
 ![Quantum Computer schema](./images/Quantum-computer-sketch.png)
 ]
 
+
 ---
 class: center
 
@@ -307,17 +333,19 @@ class: center
 
 
 ---
-# The solutions to Quantum Threat
-
+.col-7[
 ## Quantum Cryptography
 Using quantum channels to exchange private keys.
 
 > C. H. Bennett and G. Brassard. "Quantum cryptography: Public key distribution and coin tossing". In Proceedings of IEEE International Conference on Computers, Systems and Signal Processing, volume 175, page 8. New York, 1984
+]
 
 --
 
+.col-12[
 ## Post-quantum Cryptography
 Use traditionnal computers to use cryptography schemes robust to quatume attacks.
+]
 
 ---
 class: center
@@ -370,7 +398,7 @@ class: center
 * Linear combination of vectors from a basis `\({b_1, b_2, ...b_N}\)` of `\(\mathbb{R}^N\)`
 * `\( L= \left\{ \sum a_{i} {b} _{i}\ :\ a_{i}\in \mathbb {Z} \right\} \)`
 
-### fundamental hard problem
+### Fundamental hard problem
 * Closest Vector Problem (CVP)
 * Shortest Vector Problem (SVP)
 ]
@@ -496,6 +524,7 @@ class: center
 ### Quantum Computing
 * [IBM Composer Guide](https://quantum-computing.ibm.com/composer/docs/iqx/guide/)
 * [Blog (IBM) on factorizing 15 with Shor in 2021](https://research.ibm.com/blog/factor-15-shors-algorithm)
+* [Are we doomed with Shor ?](https://digitalcommons.csbsju.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1118&context=forum_lectures)
 
 ### Post quantum Cryptography
 * [Article de Stéphane Bortzmeyer sur l'annonce su NIST](https://www.bortzmeyer.org/nist-pq.html)
