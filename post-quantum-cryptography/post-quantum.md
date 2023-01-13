@@ -292,7 +292,7 @@ Note: Errors management without copy is hell !
 ]
 
 ---
-# Shor algorithm
+# The Famous Shor algorithm
 
 .col-7[
 > Peter W. Shor: Algorithms for Quantum Computation: Discrete Logarithms and Factoring. FOCS 1994: 124-134
@@ -344,7 +344,7 @@ Using quantum channels to exchange private keys.
 
 .col-12[
 ## Post-quantum Cryptography
-Use traditionnal computers to use cryptography schemes robust to quatume attacks.
+Use traditionnal computers to use cryptography schemes robust to quantum attacks.
 ]
 
 ---
@@ -476,7 +476,7 @@ class: center
 
 ---
 .col-6[
-## Lattice based digital signature
+## Lattice digital signature
 ### Principle
 * Encode document with point in space
 * Closest Vector is the signature
@@ -489,7 +489,7 @@ class: center
 
 ---
 .col-6[
-## Lattice based digital signature
+## Lattice digital signature
 ### Principle
 * Encode document with point in space
 * Closest Vector is the signature
@@ -505,7 +505,7 @@ class: center
 
 ---
 
-# From lattice to Kyber
+# From lattice encryption to Kyber
 ### Learning with errors (LWE)
 > Oded Regev. On lattices, learning with errors, random linear codes, and cryptography. pages 84–93, 2005.
 
