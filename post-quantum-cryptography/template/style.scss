@@ -58,7 +58,7 @@ $iframe-scale     : 1.5;
 * { box-sizing: border-box; }
 body { font-family: 'Poppins'; }
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 $margin 0;
+  margin: 0 0 0 0;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
@@ -174,7 +174,7 @@ table {
 
 .remark-slide-content {
   font-size: $font-size;
-  padding: 1em 2em;
+  padding: 0.5em 0.5em;
   color: $text-light;
   background-size: cover;
   background: $dark;

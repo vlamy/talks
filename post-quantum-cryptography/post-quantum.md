@@ -12,36 +12,55 @@ background-image: url(./images/home.png)
 ## Willy Malvault - Snowcamp 2023
 
 ---
-# On Wednesday 6 of July 2022
-.center[![Tweet Stephane Bortzmeyer](images/Tweet-sb.png)]
+.center[
+# At the origin
+![Tweet Stephane Bortzmeyer](images/Tweet-sb.png)
+]
 
 ---
 # What is a public key cryptography scheme ?
-
---
-
+.center[
 ![crypto scheme](./images/cryptosystem-0.png)
----
+]
 
+---
 # What is a public key cryptography scheme ?
+.center[
 ![crypto scheme](./images/cryptosystem-1.png)
----
+]
 
+---
 # What is a public key cryptography scheme ?
+.center[
 ![crypto scheme](./images/cryptosystem-2.png)
----
+]
 
+---
 # What is a public key cryptography scheme ?
+.center[
 ![crypto scheme](./images/cryptosystem-3.png)
----
+]
 
+---
 # What is a public key cryptography scheme ?
+.center[
 ![crypto scheme](./images/cryptosystem-4.png)
+]
 
 ---
 #  What's the point ?
 
-![Cruypto usage](./images/Crypto_Zoo.png)
+.center[![Cruypto usage](./images/zoo-1.png)]
+
+---
+#  What's the point ?
+
+.center[![Cruypto usage](./images/zoo-2.png)]
+
+---
+#  What's the point ?
+
+.center[![Cruypto usage](./images/zoo-3.png)]
 
 ---
 # How to implement public key cryptography ?
@@ -65,19 +84,19 @@ background-image: url(./images/home.png)
 ]
 
 ---
-### Prime number factorization
+# Prime number factorization
 ![factorization is hard](images/PxQ-0.png)
 
 ---
-### Prime number factorization
+# Prime number factorization
 ![factorization is hard](images/PxQ-1.png)
 
 ---
-### Prime number factorization
+# Prime number factorization
 ![factorization is hard](images/PxQ-2.png)
 
 ---
-### Prime number factorization
+# Prime number factorization
 ![factorization is hard](images/PxQ-3.png)
 
 ---
