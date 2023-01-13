@@ -73,14 +73,22 @@ h1 {
   line-height: 90px;
 }
 h2 {
+  background: linear-gradient(90deg, #E7B96C 0%, #852798 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
   font-size: 50px;
   line-height: 65px;
-  color: $secondary;
 }
 h3 {
+  background: linear-gradient(90deg, #E7B96C 0%, #852798 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
   font-size: 45px;
   line-height: 50px;
-  color: $pink;
 }
 
 p {
@@ -110,12 +118,12 @@ blockquote {
   color: $yellow;
   text-align: left;
   margin: 1em 0;
-  font-size: 0.5em;
+  font-size: 0.75em;
   & > p { margin: 0; }
   .quote & {
     position: relative;
     border-left: none;
-    font-size: 0.5em;
+    font-size: 1em;
 
     &::before {
       position: absolute;
@@ -174,7 +182,10 @@ table {
 
 .remark-slide-content {
   font-size: $font-size;
-  padding: 0.5em 0.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   color: $text-light;
   background-size: cover;
   background: $dark;
@@ -321,6 +332,7 @@ table {
 
 [class^="col-"] {
   float: left;
+  padding: 1em;
   &.inline-block {
     float: none;
     display: inline-block;

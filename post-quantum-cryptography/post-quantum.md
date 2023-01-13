@@ -80,7 +80,7 @@ background-image: url(./images/home.png)
     * Public key encryption
     * Digital signature
 
-* Have brothers and sisters: DSA, ECDSA, etc..
+* Influenced DSA, ECDSA, etc..
 ]
 
 ---
@@ -149,7 +149,7 @@ background-image: url(./images/home.png)
 ]
 
 ---
-# RSA and Co are working great !
+# RSA is working great !
 
 .col-6[
 ### Formalized RSA problem
@@ -161,11 +161,11 @@ background-image: url(./images/home.png)
 > Fabrice Boudot, Pierrick Gaudry, Aurore Guillevic, Nadia Heninger, Emmanuel Thomé, Paul Zimmermann: Comparing the difficulty of factorization and discrete logarithm: a 240-digit experiment. IACR Cryptol. ePrint Arch. 2020: 697 (2020)
 ]
 
+--
+
 .col-6[
 ### NIST standardization
-> Blablabla
-
-[rsa nist standardization](https://csrc.nist.gov/glossary/term/RSA)
+![rsa nist standardization](images/NIST-RSA.png)
 
 ]
 
@@ -174,6 +174,13 @@ class: impact, center, middle
 
 # But... this stands only for classical computers
 
+---
+class: center
+
+# Quantum computers can break RSA with ease !
+
+![Quantum Computer](./images/q-one-2.png)
+<!-- ![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg) -->
 ---
 
 .col-6[
@@ -483,6 +490,9 @@ class: center
 ---
 
 # Resources
+### RSA
+[rsa nist standardization](https://csrc.nist.gov/glossary/term/RSA)
+
 ### Quantum Computing
 * [IBM Composer Guide](https://quantum-computing.ibm.com/composer/docs/iqx/guide/)
 * [Blog (IBM) on factorizing 15 with Shor in 2021](https://research.ibm.com/blog/factor-15-shors-algorithm)
