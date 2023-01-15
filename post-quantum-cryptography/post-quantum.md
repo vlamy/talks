@@ -367,8 +367,7 @@ class: center
 
 ---
 .col-6[
-## Introduction to lattice
-### Definition
+### Introduction to lattice
 
 * Infinite set of points in some N dimensional space
 ]
@@ -379,8 +378,7 @@ class: center
 
 ---
 .col-6[
-## Introduction to lattice
-### Definition
+### Introduction to lattice
 * Infinite set of points in some N dimensional space
 * Linear combination of vectors from a basis `\({b_1, b_2, ...b_N}\)` of `\(\mathbb{R}^N\)`
 * `\( L= \left\{ \sum a_{i} {b} _{i}\ :\ a_{i}\in \mathbb {Z} \right\} \)`
@@ -392,8 +390,7 @@ class: center
 
 ---
 .col-6[
-## Introduction to lattice
-### Definition
+### Introduction to lattice
 * Infinite set of points in some N dimensional space
 * Linear combination of vectors from a basis `\({b_1, b_2, ...b_N}\)` of `\(\mathbb{R}^N\)`
 * `\( L= \left\{ \sum a_{i} {b} _{i}\ :\ a_{i}\in \mathbb {Z} \right\} \)`
@@ -409,8 +406,26 @@ class: center
 
 ---
 .col-6[
-## Lattice based encryption
-### Encrypt
+### Introduction to lattice
+* Infinite set of points in some N dimensional space
+* Linear combination of vectors from a basis `\({b_1, b_2, ...b_N}\)` of `\(\mathbb{R}^N\)`
+* `\( L= \left\{ \sum a_{i} {b} _{i}\ :\ a_{i}\in \mathbb {Z} \right\} \)`
+
+### Fundamental hard problem
+* Closest Vector Problem (CVP)
+* Shortest Vector Problem (SVP)
+
+### Learning With Error (LWE)
+> Oded Regev. On lattices, learning with errors, random linear codes, and cryptography. pages 84–93, 2005.
+]
+
+.col-6[
+![lattice schema](./images/Lattice-2.png)
+]
+
+---
+.col-6[
+## Encrypt with Lattice
 * Good basis `\((b_1, b_2)\)` is the private key
 * Bad basis `\((b_1', b_2')\)` is the public key
 * Encode bit with coordinates of a lattice point (according to public key, by instance)
@@ -422,13 +437,12 @@ class: center
 
 ---
 .col-6[
-## Lattice based encryption
-### Encrypt
+## Encrypt with Lattice
 * Good basis `\((b_1, b_2)\)` is the private key
 * Bad basis `\((b_1', b_2')\)` is the public key
 * Encode bit with coordinates of a lattice point (according to public key, by instance)
 
-### Encrypt
+## Decrypt with Lattice
 * Try to surround the point
 ]
 
@@ -439,13 +453,12 @@ class: center
 
 ---
 .col-6[
-## Lattice based encryption
-### Encrypt
+## Encrypt with Lattice
 * Good basis `\((b_1, b_2)\)` is the private key
 * Bad basis `\((b_1', b_2')\)` is the public key
 * Encode bit with coordinates of a lattice point (according to public key, by instance)
 
-### Encrypt
+## Decrypt with Lattice
 * Try to surround the point
 * Easy to find with good basis
 ]
@@ -457,13 +470,12 @@ class: center
 
 ---
 .col-6[
-## Lattice based encryption
-### Encrypt
+## Encrypt with Lattice
 * Good basis `\((b_1, b_2)\)` is the private key
 * Bad basis `\((b_1', b_2')\)` is the public key
 * Encode bit with coordinates of a lattice point (according to public key, by instance)
 
-### Encrypt
+## Decrypt with Lattice
 * Try to surround the point
 * Easy to find with good basis
 * Hard to find with bad basis (or no basis)
@@ -477,7 +489,6 @@ class: center
 ---
 .col-6[
 ## Lattice digital signature
-### Principle
 * Encode document with point in space
 * Closest Vector is the signature
 ]
@@ -490,7 +501,6 @@ class: center
 ---
 .col-6[
 ## Lattice digital signature
-### Principle
 * Encode document with point in space
 * Closest Vector is the signature
 
@@ -504,16 +514,56 @@ class: center
 ]
 
 ---
-
 # From lattice encryption to Kyber
-### Learning with errors (LWE)
-> Oded Regev. On lattices, learning with errors, random linear codes, and cryptography. pages 84–93, 2005.
 
-## From LWE to Kyber
-* Secret and noise can come from the same distribution
+---
+# From lattice encryption to Kyber
+.col-6[
+.mid-3[
+* Use polynimial rings rather than integers. Ring-LWE, then even Module-LWE (NTRU)
+]
+]
+
+.col-6[
+![number to polynomials](./images/Polynomials-1.png)
+]
+
+---
+# From lattice encryption to Kyber
+.col-6[
+.mid-3[
+* Use polynimial rings rather than integers. Ring-LWE, then even Module-LWE (NTRU)
+]
+]
+
+.col-6[
+![number to polynomials](./images/Polynomials-2.png)
+]
+
+---
+# From lattice encryption to Kyber
+.col-6[
+.mid-3[
+* Use polynimial rings rather than integers. Ring-LWE, then even Module-LWE (NTRU)
+]
+]
+
+.col-6[
+![number to polynomials](./images/Polynomials-3.png)
+]
+
+---
+# From lattice encryption to Kyber
+.col-6[
+.mid-3[
+* Use polynimial rings rather than integers. Ring-LWE, then even Module-LWE (NTRU)
 * Public Key can be built using a square Matrix
-* From (NTRU) : use Ring-LWE, then even Module-LWE (use polynimial rings rather than integers)
+* Secret and noise can come from the same distribution
+]
+]
 
+.col-6[
+]
 
 ---
 
