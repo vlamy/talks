@@ -558,11 +558,42 @@ class: center
 .mid-3[
 * Use polynimial rings rather than integers. Ring-LWE, then even Module-LWE (NTRU)
 * Public Key can be built using a square Matrix
-* Secret and noise can come from the same distribution
+]
+]
+.col-6[
+![polynomial matix](./images/Matrice.png)
+]
+
+---
+# Kyber matrix
+
+.center[![polynomial matrix of Kyber](./images/Kyber-0.png)]
+
+---
+# From lattice encryption to Kyber
+.col-6[
+.mid-3[
+* Use polynimial rings rather than integers. Ring-LWE, then even Module-LWE (NTRU)
+* Public Key can be built using a square Matrix
 ]
 ]
 
 .col-6[
+![polynomial matix](./images/Kyber-2.png)
+]
+
+---
+# From lattice encryption to Kyber
+.col-6[
+.mid-3[
+* Use polynimial rings rather than integers. Ring-LWE, then even Module-LWE (NTRU)
+* Public Key can be built using a square Matrix
+* **Secret and noise can come from the same distribution**
+]
+]
+
+.col-6[
+![polynomial matix](./images/Kyber-2.png)
 ]
 
 ---
