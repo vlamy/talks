@@ -625,6 +625,21 @@ class: center
 .center[![Kyber decryption](./images/Kyber-9.png)]
 
 ---
+# Kyber performances
+
+--
+
+.center[![Kyber perfs](./images/kyber-perf-1.png)]
+
+---
+# Kyber performances
+.center[![Kyber perfs](./images/Kyber-perf-2.png)]
+
+---
+# Kyber performances
+.center[![Kyber perfs](./images/Kyber-perf-3.png)]
+
+---
 # Resources
 ### RSA
 [rsa nist standardization](https://csrc.nist.gov/glossary/term/RSA)
@@ -652,6 +667,7 @@ class: center
 * [Réseaux euclidiens](https://www.youtube.com/watch?v=G23kfRJGH0k)
 * [Course on SIS and LWE](https://www.youtube.com/watch?v=K_fNK04yG4o)
 * [Course on ring LWE](https://www.youtube.com/watch?v=Lo-_ZBqGa7I)
+* [Kyber inspiration video](https://pretalx.c3voc.de/rc3-2021-cwtv/talk/UGZY8B/)
 
 ### Learning with errors (LWE)
 > Oded Regev. On lattices, learning with errors, random linear codes, and cryptography. pages 84–93, 2005.
