@@ -597,7 +597,34 @@ class: center
 ]
 
 ---
+# Kyber encryption
+.center[![Kyber encryption](./images/Kyber-3.png)]
 
+---
+# Kyber encryption
+.center[![Kyber encryption](./images/Kyber-4.png)]
+
+---
+# Kyber decryption
+.center[![Kyber decryption](./images/Kyber-5.png)]
+
+---
+# Kyber decryption
+.center[![Kyber decryption](./images/Kyber-6.png)]
+
+---
+# Kyber decryption
+.center[![Kyber decryption](./images/Kyber-7.png)]
+
+---
+# Kyber decryption
+.center[![Kyber decryption](./images/Kyber-8.png)]
+
+---
+# Kyber decryption
+.center[![Kyber decryption](./images/Kyber-9.png)]
+
+---
 # Resources
 ### RSA
 [rsa nist standardization](https://csrc.nist.gov/glossary/term/RSA)
