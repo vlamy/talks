@@ -358,6 +358,11 @@ table {
   z-index: 10;
 }
 
+.author {
+  position: absolute;
+  bottom: 3em;
+}
+
 // Animations
 @keyframes fadeIn {
   from { opacity: 0; }

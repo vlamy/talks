@@ -9,12 +9,29 @@ background-image: url(./images/home.png)
 
 # Post Quantum Cryptography and the future of the Internet
 
-## Willy Malvault - Snowcamp 2023
+.author[## Willy Malvault - Snowcamp 2023]
 
 ---
 .center[
 # At the origin
 ![Tweet Stephane Bortzmeyer](images/Tweet-sb.png)
+]
+
+---
+# Me
+.col-6[
+* Willy Malvault
+* Working for sogilis
+* Interested in Cybersecurity things
+* PhD in distributed computing in 2011
+* Folloging Stéphane since 2008
+]
+
+--
+
+.col-6[
+* I needed to understand Post Quantum Computing
+* and you ?
 ]
 
 ---
@@ -278,21 +295,30 @@ Note: Errors management without copy is hell !
 ]
 
 ---
-# What is quantum supremacy ?
+# Quantum supremacy
 
 .col-6[
-### Nuclear
-### Pharma
-### Combinatory
+... Is the ability of quantum computing to outperform classical computing.
+
+Typically resolving exponential time problems in polynomial time.
 ]
 
 .col-6[
-### Articficial intelligence
-### Breaking RSA !
+### Applies to
+* High combinatory
+* Pharma, Nuclear, Meteo
+* Articficial intelligence
+* Breaking RSA !
 ]
 
 ---
 # The Famous Shor algorithm
+
+.col-5[
+![Shor Algorithm](./images/shor.png)
+]
+
+--
 
 .col-7[
 > Peter W. Shor: Algorithms for Quantum Computation: Discrete Logarithms and Factoring. FOCS 1994: 124-134
@@ -308,9 +334,6 @@ Finds factors of a prime integer in `\(O(\log{}n)\)`
 ]
 ]
 
-.col-5[
-![Shor Algorithm](./images/shor.png)
-]
 
 ---
 # Should we be afraid of the monster ?
@@ -640,6 +663,22 @@ class: center
 .center[![Kyber perfs](./images/Kyber-perf-3.png)]
 
 ---
+# Conclusion
+
+--
+
+## Quantum computing
+* Is a real threat for Cryptography and digital industry
+* Is complexe (errors management)
+
+--
+
+## Lattice based protocol
+* Are secure according to CVP and SVP
+* Are being standardized anyway
+* Are just polynomial manipulation
+
+---
 # Resources
 ### RSA
 [rsa nist standardization](https://csrc.nist.gov/glossary/term/RSA)
@@ -655,7 +694,6 @@ class: center
 * [McKinsey - when-and-how-to-prepare-for-post-quantum-cryptography](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/when-and-how-to-prepare-for-post-quantum-cryptography)
 
 ---
-
 # Resources
 
 ## Lattice based encryption explained
@@ -679,6 +717,3 @@ class: center
 * higher class of "no information on input (text, key) can be retrieved from ciphertext".
 * IND-CCA = Indistinguishability under chosen-plaintext attack
 * 2 = [Adaptive chosen ciphertext attack](https://en.wikipedia.org/wiki/Adaptive_chosen-ciphertext_attack)
-
----
-# Conclusion
