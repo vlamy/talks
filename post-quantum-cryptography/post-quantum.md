@@ -191,98 +191,24 @@ class: impact, center, middle
 # But... this stands only for classical computers
 
 ---
-class: center
-
 # Quantum computers can break RSA with ease !
 
-![Quantum Computer](./images/q-one-2.png)
-<!-- ![IBM Q System One Quantum Computer](./images/Quantum-computer-IBM-Q-System-One.jpeg) -->
-
----
-class: middle
-
-.col-5[
-![blocsphere Qubit](./images/Qubit-1.png)
+.col-6[
+![Quantum Computer](./images/quantum-computer.png)
 ]
 
-.col-7[
-.mid-3[
+--
+
+.col-6[
 ## Qubit
-* Unit of quantum information with:
-    * Superposition of basis states `\( | 0 \rangle \)` and `\( | 1 \rangle \)`
-    * Entanglement
-    * **Cannot be copied**
-* And non quantum properties too
-    * Can be measured to `1` or `0`
-]
-]
+* Superposition
+* Entanglement
+* No copy
+    * Tricky error management
+    * Tricky network maangement
 
----
-
-.col-5[
-![Qubit superposition](./images/Qubit-2.png)
+![Qubit](./images/Qubit-simple.png)
 ]
-
-.col-7[
-.mid-3[
-## Superposition
-* Qubit state: `\( | \psi \rangle\ =\ \alpha | 0 \rangle \ +\ \beta | 1 \rangle \)`
-* `\( \alpha \)` and `\( \beta \)` are the probability amplitude of the qubit to be in the basic states `\( | 0 \rangle \)` or `\( | 1 \rangle \)`
-* **The Qubit is said to be in all states at once**
-* And... `\( \alpha \)` and `\( \beta \)` can have interferences ...
-]
-]
-
----
-.col-5[
-![qubit as wave](./images/waves-2.png)
-]
-
-.col-7[
-.mid-4[
-## Phase interference
-* `\( \alpha \)` and `\( \beta \)` can have constructive interference
-* `\( \alpha \)` and `\( \beta \)` can have destructive interference
-* Interferences can produce a deterministic qubit state
-]
-]
-
----
-
-.col-5[
-![Qubit measurement](./images/Qubit-3.png)
-]
-
-.col-7[
-.mid-3[
-## Measurement
-* Once measured, a qubit is in a deterministic state `\( | 0 \rangle \)` or `\( | 1 \rangle \)`
-* Measurement disrupts the qubit states
-    * Rules are determinating the final state
-    * Error correction are needed !
-
-Note: Errors management without copy is hell !
-]
-]
-
----
-
-.col-6[
-![Qubit entanglement](./images/Qubit-4.png)
-]
-
-.col-6[
-.mid-3[
-## Entanglement
-* Only two qubit can be entangled
-    * No sharing
-    * No more thant 2 qubits
-* Entanglement is preserved according to time and space
-* Measuring the state of an entangled qubit allows to determinate the state of the other qubit
-* There is neither teleportation nor time travel her !
-]
-]
-
 ---
 .col-6[.center[.pad-top-150[
 # Why is the qubit so powerfull ?
@@ -669,14 +595,17 @@ class: center
 
 ## Quantum computing
 * Is a real threat for Cryptography and digital industry
-* Is complexe (errors management)
+* Is complex
+    * Error management
+    * Cold environment
 
 --
 
 ## Lattice based protocol
 * Are secure according to CVP and SVP
-* Are being standardized anyway
 * Are just polynomial manipulation
+* Provide efficient cryptography schemes
+* Are being standardized anyway
 
 ---
 # Resources
