@@ -9,29 +9,37 @@ background-image: url(./images/home.png)
 
 # Post Quantum Cryptography and the future of the Internet
 
-.author[## Willy Malvault - Snowcamp 2023]
+.center[.author[
+## Willy Malvault
+### Snowcamp 2023
+]]
+
+---
+class: center, middle
+
+![sponsors](./images/Sponsor-Snowcamp-2023.png)
 
 ---
 .center[
-# At the origin
+# It all begins with
 ![Tweet Stephane Bortzmeyer](images/Tweet-sb.png)
 ]
 
 ---
-# Me
+# My Approach
 .col-6[
 * Willy Malvault
-* Working for sogilis
-* Interested in Cybersecurity things
-* PhD in distributed computing in 2011
-* Folloging Stéphane since 2008
+* Principal Consultant at Sogilis
+  * Cloud Native related stuff
+  * Cybersecurity
+* I started my carreer because of the need to understand how Internet works
+* I needed to understand Post Quantum Cryptography
 ]
 
 --
 
 .col-6[
-* I needed to understand Post Quantum Computing
-* and you ?
+![Gif lost in numbers](./images/lost-in-numbers-adam-b.gif)
 ]
 
 ---
