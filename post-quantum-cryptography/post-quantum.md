@@ -36,8 +36,6 @@ class: center, middle
 * I needed to understand Post Quantum Cryptography
 ]
 
---
-
 .col-6[
 ![Gif lost in numbers](./images/lost-in-numbers-adam-b.gif)
 ]
@@ -125,34 +123,20 @@ class: center, middle
 ![factorization is hard](images/PxQ-3.png)
 
 ---
-# RSA cryptosystem
+# RSA cryptosystem (simplified)
 
 .col-4[
   KeyGen()
   ```
   n = p * q
 
-  e = ctf(p,q)
+  Pk = (c(p,q), n)
 
+  Sk = (mmi(p, q), n)
   ```
-
-  > e is coprime to Charmichael totient function of n
-
-  ```
-  pk = (e, n)
-
-  sk = (mmi(e), n)
-  ```
-
-  > mmi is modular multiplicative inverse function
-]
-
---
-
-.col-4[
   Enc(pk, m)
 
-  `\(c = m^{e}\ mod\ n\)`
+  `\(c = m^{Pk}\ mod\ n\)`
 
   Dec(sk, c)
 
@@ -168,17 +152,26 @@ class: center, middle
 
   Verify(pk, m)
 
-  `\(h = s^{e}\ mod\ n\)`
+  `\(h = s^{Pk}\ mod\ n\)`
 
   OK if `\(hash(m)=h\)`
 ]
+
+--
+
+.col-4[
+.mid-5[
+### That's mostly exponent and modulo
+]
+]
+
 
 ---
 # RSA is working great !
 
 .col-6[
 ### The RSA problem/challenge
-  If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `e` and `sk`
+  If an attacker can retrieve `p` and `q` from `n`, then she can retrieve `Sk`
 
   It takes around 1000 core-years to factorize RSA-768 (record), with a classical computer.
 
@@ -199,7 +192,7 @@ class: impact, center, middle
 # But... this stands only for classical computers
 
 ---
-# Quantum computers can break RSA with ease !
+# Quantum computers is threatening !
 
 .col-6[
 ![Quantum Computer](./images/quantum-computer.png)
@@ -231,18 +224,18 @@ class: impact, center, middle
 ---
 # Quantum supremacy
 
-.col-6[
-... Is the ability of quantum computing to outperform classical computing.
+.center[
+.mid-2[
+**Is the ability of quantum computing to outperform classical computing.**
 
 Typically resolving exponential time problems in polynomial time.
-]
 
-.col-6[
-### Applies to
-* High combinatory
-* Pharma, Nuclear, Meteo
-* Articficial intelligence
-* Breaking RSA !
+## Strong at resolving high combinatory Problems:
+
+### Pharma, Nuclear, Meteo
+### Articficial intelligence
+### Breaking RSA !
+]
 ]
 
 ---
@@ -279,9 +272,13 @@ Finds factors of a prime integer in `\(O(\log{}n)\)`
 --
 
 .col-7[
-![Quantum Computer schema](./images/Quantum-computer-sketch.png)
+![installaiton of IBM Q system one with two mens](./images/ibm-q-one-02.jpeg)
 ]
 
+---
+class: center,middle
+
+![Quantum Computer schema](./images/Quantum-computer-sketch.png)
 
 ---
 class: center
@@ -312,10 +309,10 @@ class: center
 
 ---
 # Selected protocols
-### Public Key encryption and key-establishment
+## Public Key encryption and key-establishment
 [Kyber](https://pq-crystals.org/): an IND-CCA2-secure key-encapsulation mechanism (KEM)
 
-### Digital signature
+## Digital signature
 [Dilithium](https://pq-crystals.org/): a strongly EUF-CMA-secure digital signature algorithm
 
 [Falcon](https://falcon-sign.info/): Fast-Fourier lattice-based compact signatures over NTRU
@@ -617,13 +614,22 @@ class: center
 
 ---
 # Resources
+.col-5[
 ### RSA
-[rsa nist standardization](https://csrc.nist.gov/glossary/term/RSA)
+[RSA nist standardization](https://csrc.nist.gov/glossary/term/RSA)
 
 ### Quantum Computing
 * [IBM Composer Guide](https://quantum-computing.ibm.com/composer/docs/iqx/guide/)
 * [Blog (IBM) on factorizing 15 with Shor in 2021](https://research.ibm.com/blog/factor-15-shors-algorithm)
 * [Are we doomed with Shor ?](https://digitalcommons.csbsju.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1118&context=forum_lectures)
+]
+
+.col-7[
+![researcher running shor in 2001](images/Researchers_Lieven_Vandersypen_L_and_Matthias_Steffen_R.png)
+]
+
+---
+# Resources
 
 ### Post quantum Cryptography
 * [Article de Stéphane Bortzmeyer sur l'annonce su NIST](https://www.bortzmeyer.org/nist-pq.html)
@@ -634,7 +640,7 @@ class: center
 # Resources
 
 ## Lattice based encryption explained
-* [video on lattice based crypto](https://www.youtube.com/watch?v=832mo7IVJug)
+* [Video on lattice based crypto](https://www.youtube.com/watch?v=832mo7IVJug)
 * [Best video on Kyber](https://www.youtube.com/watch?v=FUb75AUXMvw)
 * [Learning with Error explanation video](https://www.youtube.com/watch?v=QcVns57MTxg)
 * [Dilithium](https://pq-crystals.org/dilithium/index.shtml)
@@ -654,3 +660,19 @@ class: center
 * higher class of "no information on input (text, key) can be retrieved from ciphertext".
 * IND-CCA = Indistinguishability under chosen-plaintext attack
 * 2 = [Adaptive chosen ciphertext attack](https://en.wikipedia.org/wiki/Adaptive_chosen-ciphertext_attack)
+
+---
+# Thank you !
+.col-5[
+### Tweet me at
+🐦  ->  `@malvaultw`
+
+### Mail me at
+📧  -> `willy@sogilis.com`
+
+### Get slides at
+🔖  -> `https://github.com/vlamy/talks`
+]
+.col-7[
+.center[![QR codes for feedback](./images/qrcode_openfeedback.io-pqc.png)]
+]
