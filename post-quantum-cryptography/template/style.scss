@@ -10,7 +10,6 @@ $base0:     #839496;
 $base1:     #93a1a1;
 $base2:     #eee8d5;
 $base3:     #fdf6e3;
-$yellow:    #b58900;
 $orange:    #cb4b16;
 $red:       #dc322f;
 $magenta:   #d33682;
@@ -19,46 +18,34 @@ $blue:      #268bd2;
 $cyan:      #2aa198;
 $green:     #859900;
 
-@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
-{
-    background-color:$rebase03;
-    color:$rebase0;
-    * { color:$rebase0; }
-    h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
-    a, a:active, a:visited { color: $rebase1; }
-}
-@mixin accentize($accent) {
-    a, a:active, a:visited, code.url { color: $accent; }
-    h1,h2,h3,h4,h5,h6 {color:$accent}
-}
-/* light is default mode, so pair with general html definition */
-html, .light { @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03)}
-.dark  { @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3)}
-html * {
-    color-profile: sRGB;
-    rendering-intent: auto;
-}
+// Custom Theme
+// ---------------------------------------------------------------------------
+$hard-grey: #252525;
+$purple: #852798;
+$pink: #C64163;
+$yellow: #E7B96C;
 
 // Theme
 // ---------------------------------------------------------------------------
 
-$primary          : $base02;
-$secondary        : $base0;
-$tertiary         : $yellow;
-$light            : $base2;
-$dark             : $base02;
+$primary          : #FFFFFF;
+$secondary        : #E7B96C;
+$tertiary         : #E7B96C;
+$light            : #FFFFFF;
+$dark             : #000000;
 $text-dark        : $base02;
 $text-light       : $light;
-$code-background  : $base01;
+$code-background  : $dark;
 $table-border     : #ccc;
 $overlay          : transparentize(#000, .5);
 $font-size        : 28px;
-$font-size-impact : 85px;
+$font-size-impact : 75px;
 $font             : 'Noto Sans', Arial, Helvetica, sans-serif;
 $font-title       : 'Quicksand', Arial, Helvetica, sans-serif;
 $font-fixed       : 'Inconsolata', monospace;
 $margin           : 20px;
 $iframe-scale     : 1.5;
+
 
 
 // CSS Base
@@ -69,14 +56,47 @@ $iframe-scale     : 1.5;
 @import url(fontawesome-all.css);
 
 * { box-sizing: border-box; }
-body { font-family: $font; }
+body { font-family: 'Poppins'; }
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 $margin 0;
-  font-family: $font-title;
+  margin: 0 0 0 0;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
 }
-h1 { color: $primary; }
-h2 { color: $secondary; }
-h3 { color: $tertiary; }
+h1 {
+  background: linear-gradient(90deg, #E7B96C 0%, #852798 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 70px;
+  line-height: 90px;
+}
+h2 {
+  background: linear-gradient(90deg, #E7B96C 0%, #852798 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 50px;
+  line-height: 65px;
+}
+h3 {
+  background: linear-gradient(90deg, #E7B96C 0%, #852798 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 45px;
+  line-height: 50px;
+}
+
+p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+}
+
 li { margin-bottom: .25em; };
 pre, code {
   text-align: left;
@@ -84,20 +104,26 @@ pre, code {
   color: $secondary;
   background: $code-background;
 }
-a, a:visited, a:hover, a:active { color: $text-dark; }
-img { vertical-align: inherit; }
+a, a:visited, a:hover, a:active { color: $tertiary; }
+img {
+  vertical-align: inherit;
+  object-fit: contain;
+}
 blockquote {
-  border-left: 8px solid;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 60px;
+  border-left: 5px solid;
   padding-left: .5em;
-  color: $tertiary;
+  color: $yellow;
   text-align: left;
   margin: 1em 0;
+  font-size: 0.75em;
   & > p { margin: 0; }
   .quote & {
     position: relative;
     border-left: none;
-    padding-left: 3em;
-    font-size: 1.25em;
+    font-size: 1em;
 
     &::before {
       position: absolute;
@@ -105,12 +131,11 @@ blockquote {
       left: 0;
       display: block;
       content: '“';
-      font-size: 5em;
+      font-size: 3em;
       margin-top: -.45em;
     }
   }
 }
-
 
 iframe {
   $scale: 1.5;
@@ -157,9 +182,13 @@ table {
 
 .remark-slide-content {
   font-size: $font-size;
-  padding: 1em 2em;
-  color: $text-dark;
+  padding-top: 0.2em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: $text-light;
   background-size: cover;
+  background: $dark;
 }
 
 .remark-slide-number {
@@ -167,25 +196,27 @@ table {
 }
 
 // Overrides
-.remark-slide .remark-slide-content {
-  &:not(.impact):not(.full) {
-    h2 {
-      border-left: 8px solid;
-      font-size: 40px;
-      padding-left: .5em;
-    }
-  }
-}
+// .remark-slide .remark-slide-content {
+//   &:not(.impact):not(.full) {
+//     h2 {
+//       border-left: 8px solid;
+//       font-size: 40px;
+//       padding-left: .5em;
+//     }
+//   }
+// }
 
 // Additions
 .impact {
-  background-color: $primary;
   // vertical-align: middle;
   text-align: center;
-  &, h1, h2 { color: $text-light; }
   h1 {
     font-size: $font-size-impact;
-    padding-bottom: 50px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  h4 {
+    font-size: 25px;
   }
 }
 
@@ -226,6 +257,7 @@ table {
   width: 100%;
   padding: 0 2em;
 }
+.pad-top-150 { padding-top: 150px; }
 .middle { &, & img, & span { vertical-align: middle; } };
 .top { vertical-align: top; };
 .bottom { vertical-align: bottom; };
@@ -270,7 +302,7 @@ table {
 .alt-bg { background-color: $secondary; };
 
 // custom style
-.red { color: $red; }
+.red { color: $pink; }
 
 // Simple 12-columns grid system
 .row {
@@ -300,6 +332,7 @@ table {
 
 [class^="col-"] {
   float: left;
+  padding: 1em;
   &.inline-block {
     float: none;
     display: inline-block;
@@ -308,6 +341,27 @@ table {
 
 @for $i from 1 through 12 {
   .col-#{$i} { width: math.div(100%, 12) * $i; }
+}
+
+// [class^="mid-"] {
+// }
+
+@for $i from 1 through 12 {
+  .mid-#{$i} { padding-top: #{$i}em; }
+}
+
+.rsa-img {
+  position: absolute;
+  top: 4em;
+  right: 2em;
+  opacity: 0.6;
+  z-index: 10;
+}
+
+.author {
+  position: absolute;
+  left: 17em;
+  bottom: 1em;
 }
 
 // Animations
