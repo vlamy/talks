@@ -5,19 +5,12 @@ layout: true
 ---
 
 class: impact
-background-image: url(./images/home.png)
-
-# Post Quantum Cryptography and the future of the Internet
+# Cryptographie post-quantique : les fondamentaux du numérique de demain.
 
 .center[.author[
 ## Willy Malvault
-### Snowcamp 2023
+![Logo devoxx France](images/logo-texte-devoxx-france-400.png)
 ]]
-
----
-class: center, middle
-
-![sponsors](./images/Sponsor-Snowcamp-2023.png)
 
 ---
 .center[
@@ -620,7 +613,7 @@ class: center
 
 ### Quantum Computing
 * [IBM Composer Guide](https://quantum-computing.ibm.com/composer/docs/iqx/guide/)
-* [Blog (IBM) on factorizing 15 with Shor in 2021](https://research.ibm.com/blog/factor-15-shors-algorithm)
+* [Blog (IBM) on factorizing 15 with Shor in 2001](https://research.ibm.com/blog/factor-15-shors-algorithm)
 * [Are we doomed with Shor ?](https://digitalcommons.csbsju.edu/cgi/viewcontent.cgi?referer=&httpsredir=1&article=1118&context=forum_lectures)
 ]
 
@@ -674,5 +667,5 @@ class: center
 🔖  -> `https://github.com/vlamy/talks`
 ]
 .col-7[
-.center[![QR codes for feedback](./images/qrcode_openfeedback.io-pqc.png)]
+![devoxxfr bg](images/devoxxfr-bg.png)
 ]
