@@ -212,7 +212,7 @@ table {
   text-align: center;
   h1 {
     font-size: $font-size-impact;
-    padding-top: 150px;
+    padding-top: 50px;
     padding-bottom: 150px;
   }
   h4 {
@@ -348,6 +348,30 @@ table {
 
 @for $i from 1 through 12 {
   .mid-#{$i} { padding-top: #{$i}em; }
+}
+
+.robot {
+  position: absolute;
+  bottom: 2em;
+  left: 1em;
+  opacity: 0.6;
+  z-index: 10;
+}
+
+.balloon {
+  position: absolute;
+  bottom: 2em;
+  right: 1em;
+  opacity: 0.6;
+  z-index: 10;
+}
+
+.car {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0.6;
+  z-index: 10;
 }
 
 .rsa-img {

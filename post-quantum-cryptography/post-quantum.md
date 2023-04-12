@@ -6,6 +6,9 @@ layout: true
 
 class: impact
 # Cryptographie post-quantique : les fondamentaux du numérique de demain.
+.robot[![Robot color box](images/robot_box_color-250x250.png)]
+.balloon[![baloon](images/balloon_3.png)]
+.car[![car better than tesla](images/car_better_tan_tesla.png)]
 
 .center[.author[
 ## Willy Malvault
