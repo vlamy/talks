@@ -5,15 +5,15 @@ layout: true
 ---
 
 class: impact
-# Cryptographie post-quantique : les fondamentaux du numérique de demain.
+# Cryptographie post-quantique : les fondamentaux du numérique de demain
 .robot[![Robot color box](images/robot_box_color-250x250.png)]
 .balloon[![baloon](images/balloon_3.png)]
 .car[![car better than tesla](images/car_better_tan_tesla.png)]
 
-.center[.author[
+.author[
 ## Willy Malvault
 ![Logo devoxx France](images/logo-texte-devoxx-france-400.png)
-]]
+]
 
 ---
 .center[
@@ -139,8 +139,6 @@ class: impact
   `\(m = c^{sk}\ mod\ n\)`
 ]
 
---
-
 .col-4[
   Sign(sk, m)
 
@@ -152,8 +150,6 @@ class: impact
 
   OK if `\(hash(m)=h\)`
 ]
-
---
 
 .col-4[
 .mid-5[
@@ -202,7 +198,7 @@ class: impact, center, middle
 * Entanglement
 * No copy
     * Tricky error management
-    * Tricky network maangement
+    * Tricky network management
 
 ![Qubit](./images/Qubit-simple.png)
 ]
