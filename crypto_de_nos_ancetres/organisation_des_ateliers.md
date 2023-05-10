@@ -3,6 +3,8 @@
 - Historique de la méthode : qui, quand, pourquoi ?  
 - Fourniture du message à déchiffrer et des outils, mais sans indiquer comment s’en servir  
 - Solution et regard critique sur la performance de la méthode de chiffrement présentée  
+- Nombre d'ateliers : 5 (4 personnes / atelier)  
+- Taille du groupe : 20 personnes max  
 
 ## Introduction générale
 
@@ -22,11 +24,17 @@ Selon les récits de Plutarque, elle a été utilisée par Lysandre de Sparte lo
 
 ### Atelier
 
-Je vois plusieurs façons de le faire :  
+On donne les rubans, sans les scytales, on leur fait chercher les scytales dans l'environnement (mode escape game).  
+Puis révélation de la méthode de chiffrement/déchiffrement.  
 
-1- On donne les scytales et le texte chiffré (mais pas sur un ruban, plutôt sur des feuilles imprimées et plastifiées par exemple). On laisse alors les gens comprendre qu'il faut écrire le texte sur un ruban et l'enrouler autour de la scytale pour le déchiffrer  
-2- On donne les rubans, sans les scytales, les laisse chercher puis ensuite on donne les scytales  
-3- On porte toi et moi des rubans en guise de ceinture, comme à l'époque, et on dit aux gens "nous portons chacun sur nous un message chiffré", puis une fois qu'ils ont trouvé les rubans on retombe sur la proposition 2  
+Level 2 : on prépare des scytales et des messages chiffrés avec un nombre de faces différent pour chaque groupe.  
+Pour brouiller les pistes, on fournit également papier et crayon.  
+
+#### Message
+
+**Clair** : Le kouign amann c'est super mais je préfère le kugelhopf !  
+**Diamètre (=clé)** : 6 faces sur la scytale / variable  
+**Chiffré** : Variable  
 
 ### Solution de l'atelier et regard critique
 
@@ -37,13 +45,19 @@ Je vois plusieurs façons de le faire :
 
 ### Historique  
 
-Comme son nom l'indique, il a été utilisé par César afin de préserver le secret de ses correspondances, qui l'utilisait de plus avec l'alphabet grec, obscur pour les gaulois mais parfaitement maîtrisé par l'élite romaine.
+Comme son nom l'indique, il a été utilisé par César afin de préserver le secret de ses correspondances, qui l'utilisait de plus avec l'alphabet grec, obscur pour les gaulois mais parfaitement maîtrisé par l'élite romaine.  
 
 ### Atelier  
 
 - On donne le texte en alphabet grec  
 - Comme on est sympas, on donne la table de traduction grec -> latin  
 - Finalement, on indique que c'est un chiffrement par substitution, et finalement la solution  
+
+#### Message
+
+**Clair** : Boire ou conduire, je rentre à dos de licorne !  
+**Clé** (décalage) : Avocat (A vaut K, rotation 11)  
+**Chiffré** : Lysbo ye myxnesbo, to boxdbo k nyc no vsmybxo !  
 
 ### Solution de l'atelier et regard critique
 
@@ -66,20 +80,24 @@ Au XIXè siècle Friedrich Kasiski publie une [méthode de cryptanalyse](https:/
 
 La taille de la clé joue donc un rôle important, plus elle est grande, moins il y a de répétitions de motifs et de données disponibles pour l'attaque par analyse de fréquence.  
 
+#### Message
+
+**Clair** : Didon dina dit-on du dos d'un dodu dindon  
+**Clé**  : Camping  
+**Chiffré** : Fipdv qopa pxb-bt fu pda q'ap dasc qopdac
+
 
 ## Conclusion  
 
 # Todo-list et commentaires
 
-- [ ] Déterminer le nombre de groupes pour les ateliers -> $x$ dans la suite pour le nombre d'éléments à préparer
-- [ ] Fabriquer les $x$ scytales  
-- [ ] Fabriquer $x$ rubans avec des chutes de tissu  
-- [ ] Imprimer + plastifier $x$ correspondances entre alphabet grec et latin  
-- [ ] Imprimer + plastifier $x$ messages chiffrés via César  
-- [ ] Imprimer + plastifier $x$ messages chiffrés via Vigenère (sur les même feuilles que César peut-être ?)  
-- [ ] Imprimer + plastifier $x$ tableaux de correspondance pour Vigenère  
-- [ ] Prévoir $x$ feutres pour ardoise  
-
-
-L'avantage des feuilles plastifiées c'est que l'on peut s'en servir comme d'une ardoise avec les feutres.  
-On peut par ailleurs faire ressembler les feuilles à de vieux parchemins en brûlant les bords comme pour les cartes au trésor de pirates :-P
+- [x] Déterminer le nombre de groupes pour les ateliers -> $x$=5 dans la suite pour le nombre d'éléments à préparer
+- [ ] [Willy] Fabriquer les 5 scytales  
+- [ ] [Vivi] Fabriquer 5 rubans avec des chutes de tissu  
+- [ ] [Vivi] Plastifier 5 messages chiffrés via César  
+- [ ] [Willy] Préparer les roues de correspodance pour le chiffre de César  
+- [ ] [Vivi] Plastifier 5 roues de correspondance pour le chiffre de César + attaches parisiennes  
+- [ ] [Willy] Trouver image de fond pour Vigenère  
+- [ ] Imprimer + plastifier 5 messages chiffrés via Vigenère  
+- [ ] [Vivi] Plastifier 5 tableaux de correspondance pour Vigenère  
+- [ ] [Willy] Prévoir 5 feutres pour ardoise  
