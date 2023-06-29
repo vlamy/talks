@@ -1,6 +1,6 @@
 # Organisation de chaque atelier
 
-- Historique de la méthode : qui, quand, pourquoi ?  
+- Historique de la méthode : qui, quand, pourquoi ?
 - Fourniture du message à déchiffrer et des outils, mais sans indiquer comment s’en servir  
 - Solution et regard critique sur la performance de la méthode de chiffrement présentée  
 
@@ -9,7 +9,7 @@
 Bonjour à tous et merci de votre présence ici pour revivre la cryptographie de nos ancêtres, celle d’avant l’ère informatique. 
 Car oui, le besoin de pouvoir échanger des messages de manière confidentielle date de plus de 2000 ans.  
 
-Comme pour beaucoup de domaines, c’est un besoin né d’affaires politiques et militaires qui a conduit à l’élaboration de méthodes de chiffrement toujours de plus en plus robuste à mesure que celles-ci se voyaient cassées par les ennemis.  
+Comme pour beaucoup de domaines, c’est un besoin né d’affaires politiques et militaires qui a conduit à l’élaboration de méthodes de chiffrement toujours de plus en plus robuste à mesure que celles-ci se voyaient cassées par les ennemis.
 
 ## La scytale
 
@@ -67,19 +67,19 @@ Au XIXè siècle Friedrich Kasiski publie une [méthode de cryptanalyse](https:/
 La taille de la clé joue donc un rôle important, plus elle est grande, moins il y a de répétitions de motifs et de données disponibles pour l'attaque par analyse de fréquence.  
 
 
-## Conclusion  
+## Conclusion
 
 # Todo-list et commentaires
 
 - [ ] Déterminer le nombre de groupes pour les ateliers -> $x$ dans la suite pour le nombre d'éléments à préparer
-- [ ] Fabriquer les $x$ scytales  
-- [ ] Fabriquer $x$ rubans avec des chutes de tissu  
-- [ ] Imprimer + plastifier $x$ correspondances entre alphabet grec et latin  
-- [ ] Imprimer + plastifier $x$ messages chiffrés via César  
-- [ ] Imprimer + plastifier $x$ messages chiffrés via Vigenère (sur les même feuilles que César peut-être ?)  
-- [ ] Imprimer + plastifier $x$ tableaux de correspondance pour Vigenère  
-- [ ] Prévoir $x$ feutres pour ardoise  
+- [ ] Fabriquer les $x$ scytales
+- [ ] Fabriquer $x$ rubans avec des chutes de tissu
+- [ ] Imprimer + plastifier $x$ correspondances entre alphabet grec et latin
+- [ ] Imprimer + plastifier $x$ messages chiffrés via César
+- [ ] Imprimer + plastifier $x$ messages chiffrés via Vigenère (sur les même feuilles que César peut-être ?)
+- [ ] Imprimer + plastifier $x$ tableaux de correspondance pour Vigenère
+- [ ] Prévoir $x$ feutres pour ardoise
 
 
-L'avantage des feuilles plastifiées c'est que l'on peut s'en servir comme d'une ardoise avec les feutres.  
+L'avantage des feuilles plastifiées c'est que l'on peut s'en servir comme d'une ardoise avec les feutres.
 On peut par ailleurs faire ressembler les feuilles à de vieux parchemins en brûlant les bords comme pour les cartes au trésor de pirates :-P

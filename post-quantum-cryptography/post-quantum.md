@@ -4,17 +4,13 @@ layout: true
 
 ---
 
-class: impact
+class: impact, background-image: url("images/sunnytech-outro.png")
 # Cryptographie post-quantique : les fondamentaux du numérique de demain
-.robot[![Robot color box](images/robot_box_color-250x250.png)]
-.balloon[![baloon](images/balloon_3.png)]
-.car[![car better than tesla](images/car_better_tan_tesla.png)]
+.robot[![flammy pet](images/flamand.png)]
+.balloon[![logo=sunnytech](images/sunnytech-logo.jpeg)]
 
-.author[
 ## Willy Malvault
-![Logo devoxx France](images/logo-texte-devoxx-france-400.png)
-]
-
+### Sunnytech-2023
 ---
 .center[
 # It all begins with
@@ -660,11 +656,11 @@ class: center
 🐦  ->  `@malvaultw`
 
 ### Mail me at
-📧  -> `willy@sogilis.com`
+📧  -> `willy@vlamy.fr`
 
 ### Get slides at
 🔖  -> `https://github.com/vlamy/talks`
 ]
 .col-7[
-![devoxxfr bg](images/devoxxfr-bg.png)
+![sunnytech bg](images/sunnytech-outro.png)
 ]
